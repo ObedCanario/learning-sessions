@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 23:07:12 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 23:15:01 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Structured Analysis · 2 — Breaking a System Down</title>
+      <description>Data and control, building a diagram from outside events, functional decomposition, and why jobs and objects cut the world in different directions. Full text read, with commentary.</description>
+      <itunes:summary>Data and control, building a diagram from outside events, functional decomposition, and why jobs and objects cut the world in different directions. Full text read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-02-breaking-it-down.mp3" length="8173161" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">90b60b46-add6-4d57-8256-08f1c3deacea</guid>
+      <pubDate>Wed, 25 Nov 2026 23:15:01 +0000</pubDate>
+      <itunes:duration>17:02</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Structured Analysis · 1 — The Big Picture and Where It Came From</title>
       <description>What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.</description>

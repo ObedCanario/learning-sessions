@@ -12,5 +12,19 @@
     "version": 1,
     "season": 1,
     "episode": 1
+  },
+  {
+    "slug": "structured-analysis-02-breaking-it-down",
+    "title": "Structured Analysis · 2 — Breaking a System Down",
+    "description": "Data and control, building a diagram from outside events, functional decomposition, and why jobs and objects cut the world in different directions. Full text read, with commentary.",
+    "style": "rohn-study",
+    "file": "structured-analysis-02-breaking-it-down.mp3",
+    "bytes": 8173161,
+    "duration": "17:02",
+    "guid": "90b60b46-add6-4d57-8256-08f1c3deacea",
+    "published": "2026-11-25T23:15:01+00:00",
+    "version": 1,
+    "season": 1,
+    "episode": 2
   }
 ]
