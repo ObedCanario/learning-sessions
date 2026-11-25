@@ -1,5 +1,5 @@
 """Generate a 3000x3000 cover.jpg (Apple requires 1400-3000px square).
-Usage: make_cover.py [SHOW_FOLDER] [--subtitle TEXT]"""
+Usage: make_cover.py [SHOW_FOLDER] [--subtitle TEXT] [--colors R,G,B:R,G,B]"""
 import json, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
@@ -8,12 +8,16 @@ args = [a for a in sys.argv[1:]]
 subtitle = ""
 if "--subtitle" in args:
     i = args.index("--subtitle"); subtitle = args[i + 1]; del args[i:i + 2]
+if "--colors" in args:
+    i = args.index("--colors"); del args[i:i + 2]
 root = Path(__file__).resolve().parent / (args[0] if args else "")
 title = json.loads((root / "podcast.json").read_text())["title"]
 S = 3000
 img = Image.new("RGB", (S, S))
 d = ImageDraw.Draw(img)
 top, bot = ((24, 40, 72), (196, 120, 48)) if not args else ((18, 18, 22), (120, 92, 52))
+if "--colors" in sys.argv:
+    top, bot = (tuple(int(v) for v in c.split(",")) for c in sys.argv[sys.argv.index("--colors") + 1].split(":"))
 for y in range(S):
     t = y / S
     d.line([(0, y), (S, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(top, bot)))

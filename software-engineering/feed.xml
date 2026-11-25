@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Engineering</title>
+    <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+    <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Nov 2026 23:07:12 +0000</lastBuildDate>
+    <itunes:author>Obed Canario</itunes:author>
+    <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
+    <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
+    <image><url>https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg</url><title>Software Engineering</title><link>https://obedcanario.github.io/learning-sessions/software-engineering/</link></image>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>serial</itunes:type>
+    <item>
+      <title>Structured Analysis · 1 — The Big Picture and Where It Came From</title>
+      <description>What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.</description>
+      <itunes:summary>What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-01-big-picture.mp3" length="6797063" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">ac0aaf1f-a24c-4409-809e-96cabc284c1e</guid>
+      <pubDate>Wed, 25 Nov 2026 23:07:12 +0000</pubDate>
+      <itunes:duration>14:10</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

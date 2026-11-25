@@ -214,6 +214,8 @@ def clean_markdown(text: str) -> str:
     text = re.sub(r"`([^`]*)`", r"\1", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)      # links
     text = re.sub(r"^\s*>\s?", "", text, flags=re.M)          # quote markers
+    # end each list item with punctuation so items don't run together when spoken
+    text = re.sub(r"^(\s*(?:[-*+]|\d+\.)\s+.*?[^.,;:!?\"')\s])\s*$", r"\1.", text, flags=re.M)
     text = re.sub(r"^\s*[-*+]\s+", "", text, flags=re.M)      # bullets
     text = text.replace("[", "").replace("]", "")             # editorial brackets
     return re.sub(r"\s+", " ", text).strip()
@@ -311,11 +313,14 @@ SAY = [(re.compile(r"&\s?c\."), "etcetera"),
        (re.compile(r"\b(\d+):(\d+)\b(?![\d:])"), r"\1 to \2")]   # ratios like 2:1
 
 
+SAY_ALL = [(re.compile("[\U0001F300-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]+ ?"), ""),  # emoji
+           (re.compile(r"\s*(→|->)\s*"), ", then ")]
+
+
 def say_fix(text: str, who: str) -> str:
-    if who == "quote":
-        for rx, rep in SAY:
-            text = rx.sub(rep, text)
-    return text
+    for rx, rep in SAY_ALL + (SAY if who == "quote" else []):
+        text = rx.sub(rep, text)
+    return text.strip()
 
 
 def render_audio(body: str, style: dict, out_mp3: Path, title: str, author: str) -> None:

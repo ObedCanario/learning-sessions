@@ -1,0 +1,10 @@
+{
+  "title": "Software Engineering",
+  "description": "Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.",
+  "author": "Obed Canario",
+  "base_url": "https://obedcanario.github.io/learning-sessions/software-engineering",
+  "language": "en-us",
+  "category": "Technology",
+  "image": "cover.jpg",
+  "type": "serial"
+}

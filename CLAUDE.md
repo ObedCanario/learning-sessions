@@ -10,9 +10,13 @@ Each show is its own Apple Podcasts subscription with its own feed:
   Works so far: Physics II.3 (S2 E3, before Ethics) and Ethics III (S3 E1–12). Titles carry the
   work name ("Physics II · 3 — …"). If two works share a book number, pick a new scheme first.
 
+- `software-engineering/` = **Software Engineering** (serial; season = topic/series, episode = part):
+  https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml
+  S1 = Structured Analysis (4 parts, from the user's plain-English Wikipedia write-up).
+
 Use `./pod --show <folder> ...` for any show other than the root one.
 New show: `./pod new-show <folder> --title "Title" [--serial]`, then
-`.venv/bin/python make_cover.py <folder> --subtitle "..."`.
+`.venv/bin/python make_cover.py <folder> --subtitle "..." [--colors R,G,B:R,G,B]` (give each show its own colors).
 When the user says "album", make or reuse a show. Use seasons for books or parts inside it.
 
 ## When the user sends "<style>" + text
