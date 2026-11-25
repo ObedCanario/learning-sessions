@@ -1,7 +1,7 @@
 ---
-voice: en-US-GuyNeural
-rate: -8%
-pitch: -2Hz
+voice: en-US-AndrewMultilingualNeural
+rate: -3%
+pitch: +0Hz
 paragraph_pause: 1.4
 section_pause: 3.0
 intro_pause: 1.0

@@ -1,7 +1,7 @@
 ---
-voice: en-US-GuyNeural
-rate: -6%
-pitch: -2Hz
+voice: en-US-AndrewMultilingualNeural
+rate: -3%
+pitch: +0Hz
 quote_voice: en-GB-RyanNeural
 quote_rate: -8%
 quote_pitch: -2Hz
