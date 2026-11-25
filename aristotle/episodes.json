@@ -40,5 +40,19 @@
     "version": 1,
     "season": 3,
     "episode": 3
+  },
+  {
+    "slug": "ethics-3-04-what-we-wish-for",
+    "title": "Ethics III · 4 — What We Wish For",
+    "description": "Do we wish for what is good, or for what only seems good? Aristotle's answer, the good person as a measuring stick, and why pleasure fools us. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-04-what-we-wish-for.mp3",
+    "bytes": 3291159,
+    "duration": "6:51",
+    "guid": "483a09b5-83f4-46ce-858a-d1db729cf779",
+    "published": "2026-11-25T01:21:58+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 4
   }
 ]

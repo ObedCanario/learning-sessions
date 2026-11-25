@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:20:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:21:58 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 4 — What We Wish For</title>
+      <description>Do we wish for what is good, or for what only seems good? Aristotle's answer, the good person as a measuring stick, and why pleasure fools us. Full chapter read, with commentary.</description>
+      <itunes:summary>Do we wish for what is good, or for what only seems good? Aristotle's answer, the good person as a measuring stick, and why pleasure fools us. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-04-what-we-wish-for.mp3" length="3291159" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">483a09b5-83f4-46ce-858a-d1db729cf779</guid>
+      <pubDate>Wed, 25 Nov 2026 01:21:58 +0000</pubDate>
+      <itunes:duration>6:51</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 3 — Thinking Things Through</title>
       <description>We only deliberate about what is up to us, and we think about the route, not the destination. Aristotle on how good planning actually works. Full chapter read, with commentary.</description>
