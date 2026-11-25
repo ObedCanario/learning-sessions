@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:24:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:26:05 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 6 — What Courage Is About</title>
+      <description>Not every fearlessness is courage. Aristotle narrows courage down to facing the greatest danger for a noble reason. Full chapter read, with commentary.</description>
+      <itunes:summary>Not every fearlessness is courage. Aristotle narrows courage down to facing the greatest danger for a noble reason. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-06-what-courage-is-about.mp3" length="3905151" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">c74f9938-a216-4816-9b7e-83831f3e3467</guid>
+      <pubDate>Wed, 25 Nov 2026 01:26:05 +0000</pubDate>
+      <itunes:duration>8:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 5 — We Are Responsible for Our Character</title>
       <description>Character is built by repeated actions, so it is ours. The thrown stone, the inner eye, and why you can't wish your way out of a habit. Full chapter read, with commentary.</description>

@@ -68,5 +68,19 @@
     "version": 1,
     "season": 3,
     "episode": 5
+  },
+  {
+    "slug": "ethics-3-06-what-courage-is-about",
+    "title": "Ethics III · 6 — What Courage Is About",
+    "description": "Not every fearlessness is courage. Aristotle narrows courage down to facing the greatest danger for a noble reason. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-06-what-courage-is-about.mp3",
+    "bytes": 3905151,
+    "duration": "8:08",
+    "guid": "c74f9938-a216-4816-9b7e-83831f3e3467",
+    "published": "2026-11-25T01:26:05+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 6
   }
 ]
