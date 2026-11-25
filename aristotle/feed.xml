@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:26:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:27:41 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 7 — The Brave, the Reckless, and the Coward</title>
+      <description>Courage is the middle between too much fear and too much boldness. Why the reckless person is often a coward in costume. Full chapter read, with commentary.</description>
+      <itunes:summary>Courage is the middle between too much fear and too much boldness. Why the reckless person is often a coward in costume. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-07-brave-reckless-coward.mp3" length="4597746" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">f984c9bd-4065-4584-b06d-c1332a08d4d4</guid>
+      <pubDate>Wed, 25 Nov 2026 01:27:41 +0000</pubDate>
+      <itunes:duration>9:35</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 6 — What Courage Is About</title>
       <description>Not every fearlessness is courage. Aristotle narrows courage down to facing the greatest danger for a noble reason. Full chapter read, with commentary.</description>

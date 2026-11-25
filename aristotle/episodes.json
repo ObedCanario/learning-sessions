@@ -82,5 +82,19 @@
     "version": 1,
     "season": 3,
     "episode": 6
+  },
+  {
+    "slug": "ethics-3-07-brave-reckless-coward",
+    "title": "Ethics III · 7 — The Brave, the Reckless, and the Coward",
+    "description": "Courage is the middle between too much fear and too much boldness. Why the reckless person is often a coward in costume. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-07-brave-reckless-coward.mp3",
+    "bytes": 4597746,
+    "duration": "9:35",
+    "guid": "f984c9bd-4065-4584-b06d-c1332a08d4d4",
+    "published": "2026-11-25T01:27:41+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 7
   }
 ]
