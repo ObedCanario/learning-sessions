@@ -124,5 +124,19 @@
     "version": 1,
     "season": 3,
     "episode": 9
+  },
+  {
+    "slug": "ethics-3-10-what-temperance-is-about",
+    "title": "Ethics III · 10 — What Temperance Is About",
+    "description": "Self-control is not about every pleasure. Aristotle narrows it down to the pleasures we share with animals, and the glutton who wanted a longer throat. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-10-what-temperance-is-about.mp3",
+    "bytes": 4635543,
+    "duration": "9:39",
+    "guid": "e667f653-6e53-4cff-8819-a72f8866ccd6",
+    "published": "2026-11-25T01:32:12+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 10
   }
 ]
