@@ -1,42 +1,55 @@
-# Private podcast feed
+# Private podcast feeds
 
 Text → styled script → TTS MP3 → `feed.xml` → git commit/push → GitHub Pages → Apple Podcasts.
 
-## When the user sends "<style>" + text
+## Shows ("albums")
+Each show is its own Apple Podcasts subscription with its own feed:
+- Root folder = **Learning Sessions**: https://obedcanario.github.io/learning-sessions/feed.xml
+- `aristotle/` = **Aristotle** (serial; season = book number, episode = chapter):
+  https://obedcanario.github.io/learning-sessions/aristotle/feed.xml
 
-1. Read `styles/<style>.md` (body = writing guide). If the style doesn't exist, create a new
-   `styles/<slug>.md` modeled on `styles/jim-rohn.md` (pick voice/rate/pauses to fit), then use it.
-   For a real person's style, emulate the delivery only: never claim to be them or invent quotes
-   attributed to them.
-2. Rewrite the user's text into a spoken script following that guide. Keep all the substance.
-   Save it to `scripts/<slug>.md`. Script syntax:
-   - blank line between paragraphs = paragraph pause
-   - `# Heading` = spoken, then a section pause
-   - `[pause]` / `[pause 3]` = explicit silence in seconds
-   - `---` = section break
-3. Publish (renders audio, updates feed, commits, pushes):
-   `./pod publish scripts/<slug>.md --title "Title" --style <style> --description "One line"`
-4. Report the episode title, duration, and the feed URL.
+Use `./pod --show <folder> ...` for any show other than the root one.
+New show: `./pod new-show <folder> --title "Title" [--serial]`, then
+`.venv/bin/python make_cover.py <folder> --subtitle "..."`.
+When the user says "album", make or reuse a show. Use seasons for books or parts inside it.
+
+## When the user sends "<style>" + text
+1. Read `styles/<style>.md` (body = writing guide). If it doesn't exist, create one modeled on
+   `styles/jim-rohn.md`. For a real person's style, emulate the delivery only: never claim to be
+   them or invent quotes attributed to them.
+2. Rewrite the text into a spoken script. Keep all the substance. Save it to `<show>/scripts/<slug>.md`.
+3. `./pod [--show s] publish <script> --title "..." --style <style> --description "..."`
+4. Report title, duration, and the feed URL.
+
+## When the user wants a text kept intact (book read in full + commentary)
+Use `styles/rohn-study.md`. Save the source verbatim to `<show>/sources/<name>.md` with
+`Chapter N: Title` lines. One script per chapter, with front matter
+(`title, slug, season, episode, style, source, chapter, description`). Insert the original text only with
+`{{read a-b}}` (paragraph numbers within the chapter), never by retyping it. Then:
+- `./pod --show s check <scripts...>` must say INTACT for each script, and host FRE should be in
+  the user's target (Aristotle: 60–70).
+- Publish in chapter order so dates and episode numbers line up.
+
+## Script syntax
+- blank line = paragraph pause · `# Heading` = spoken + section pause · `---` = section break
+- `[pause]` / `[pause 3]` = silence in seconds
+- `> text` = read by the style's quote voice · `{{read 3-5}}` = verbatim source paragraphs (quote voice)
 
 ## Replacing an episode
-`./pod replace <slug> scripts/<slug>.md [--title ..] [--style ..]`
-Keeps the same GUID and publish date (Apple treats it as the same episode) and writes a
-versioned file name (`<slug>-v2.mp3`) so podcast apps re-download the new audio.
+`./pod [--show s] replace <slug> <script>`: same GUID and date (Apple treats it as the same
+episode) and a versioned file (`<slug>-v2.mp3`) so apps re-download it.
 
 ## Other commands
-- `./pod list` — episodes
-- `./pod remove <slug>`
-- `./pod preview scripts/x.md --style jim-rohn -o preview.mp3` — audio only, nothing published
-- `./pod feed` — rebuild feed.xml from episodes.json
-- `.venv/bin/python make_cover.py` — regenerate cover.jpg from the title in podcast.json
+`list`, `remove <slug>`, `feed` (rebuild from episodes.json), `preview <script> -o x.mp3` (audio
+only), `check <scripts>` (includes + readability).
 
-## Files
-- `podcast.json` — show settings (title, author, base_url)
-- `episodes.json` — source of truth for the feed; `feed.xml` is generated from it
-- `episodes/` — MP3s, `scripts/` — the spoken scripts, `styles/` — voice + writing presets
-- TTS: edge-tts (Microsoft neural voices, free, no key). List voices: `.venv/bin/edge-tts --list-voices`
-- Setup on a new machine: `python3 -m venv .venv && .venv/bin/pip install edge-tts pillow` (needs ffmpeg)
+## Files and setup
+- Per show: `podcast.json`, `episodes.json` (source of truth), `feed.xml` + `index.html`
+  (generated), `episodes/` (MP3), `scripts/`, `sources/`
+- TTS: edge-tts (free Microsoft neural voices). Voices: `.venv/bin/edge-tts --list-voices`
+- Setup: `python3 -m venv .venv && .venv/bin/pip install edge-tts pillow textstat` (needs ffmpeg)
+- Audio is 64 kbps mono (~0.5 MB/min). The GitHub Pages site limit is ~1 GB, so watch total size.
 
-The feed is unlisted, not secret: anyone with the URL can listen. It stays out of Apple's
-directory because it was never submitted to Podcasts Connect. Do NOT set `itunes_block: true`
-in podcast.json: Apple then refuses "Follow a Show by URL" ("server or feed could not be found").
+Feeds are unlisted, not secret: anyone with the URL can listen. They stay out of Apple's
+directory because they were never submitted to Podcasts Connect. Do NOT set `itunes_block: true`:
+Apple then refuses "Follow a Show by URL" ("server or feed could not be found").

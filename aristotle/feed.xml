@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aristotle</title>
+    <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+    <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Nov 2026 01:17:14 +0000</lastBuildDate>
+    <itunes:author>Obed Canario</itunes:author>
+    <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
+    <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
+    <image><url>https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg</url><title>Aristotle</title><link>https://obedcanario.github.io/learning-sessions/aristotle/</link></image>
+    <itunes:category text="Education"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 1 — Willing and Unwilling Actions</title>
+      <description>When is something truly your doing? Aristotle separates forced acts and honest mistakes from everything else, which is yours. Full chapter read, with commentary.</description>
+      <itunes:summary>When is something truly your doing? Aristotle separates forced acts and honest mistakes from everything else, which is yours. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-01-willing-and-unwilling.mp3" length="10471515" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">e516db6a-1b40-4d62-94ce-1a7bd1c1ae7d</guid>
+      <pubDate>Wed, 25 Nov 2026 01:17:14 +0000</pubDate>
+      <itunes:duration>21:49</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
