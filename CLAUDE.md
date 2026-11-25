@@ -36,6 +36,8 @@ Use `styles/rohn-study.md`. Save the source verbatim to `<show>/sources/<name>.m
 - blank line = paragraph pause · `# Heading` = spoken + section pause · `---` = section break
 - `[pause]` / `[pause 3]` = silence in seconds
 - `> text` = read by the style's quote voice · `{{read 3-5}}` = verbatim source paragraphs (quote voice)
+- Front matter `notes: host` = `[bracketed notes]` inside `{{read}}` text are read by the host voice
+  (for user-supplied plain-English versions). A paragraph that is all **bold** = heading (section pause)
 - `SAY` in podcast.py = spoken-only fixes for the reader voice (`&c.` → etcetera, `2:1` → two to one);
   sources stay verbatim
 
