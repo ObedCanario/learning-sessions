@@ -292,6 +292,18 @@ def silence(seconds: float, dst: Path) -> None:
          "-t", f"{seconds:.2f}", "-c:a", "pcm_s16le", str(dst)])
 
 
+# Spoken-only fixes for old translations (the source file stays verbatim; `check` is unaffected).
+SAY = [(re.compile(r"&\s?c\."), "etcetera"),
+       (re.compile(r"\b(\d+):(\d+)\b(?![\d:])"), r"\1 to \2")]   # ratios like 2:1
+
+
+def say_fix(text: str, who: str) -> str:
+    if who == "quote":
+        for rx, rep in SAY:
+            text = rx.sub(rep, text)
+    return text
+
+
 def render_audio(body: str, style: dict, out_mp3: Path, title: str, author: str) -> None:
     segs = parse_script(body, style)
     if not any(s[0] == "speech" for s in segs):
@@ -313,7 +325,7 @@ def render_audio(body: str, style: dict, out_mp3: Path, title: str, author: str)
             _, text, who = s
             p = "quote_" if who == "quote" else ""
             mp3 = td / f"{i:04d}.mp3"
-            asyncio.run(tts(text, mp3, style[p + "voice"], style[p + "rate"], style[p + "pitch"]))
+            asyncio.run(tts(say_fix(text, who), mp3, style[p + "voice"], style[p + "rate"], style[p + "pitch"]))
             run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-ar", "24000", "-ac", "1",
                  "-c:a", "pcm_s16le", str(wav)])
             wavs.append(wav)

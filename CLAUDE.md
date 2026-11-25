@@ -7,6 +7,8 @@ Each show is its own Apple Podcasts subscription with its own feed:
 - Root folder = **Learning Sessions**: https://obedcanario.github.io/learning-sessions/feed.xml
 - `aristotle/` = **Aristotle** (serial; season = book number, episode = chapter):
   https://obedcanario.github.io/learning-sessions/aristotle/feed.xml
+  Works so far: Physics II.3 (S2 E3, before Ethics) and Ethics III (S3 E1–12). Titles carry the
+  work name ("Physics II · 3 — …"). If two works share a book number, pick a new scheme first.
 
 Use `./pod --show <folder> ...` for any show other than the root one.
 New show: `./pod new-show <folder> --title "Title" [--serial]`, then
@@ -34,6 +36,8 @@ Use `styles/rohn-study.md`. Save the source verbatim to `<show>/sources/<name>.m
 - blank line = paragraph pause · `# Heading` = spoken + section pause · `---` = section break
 - `[pause]` / `[pause 3]` = silence in seconds
 - `> text` = read by the style's quote voice · `{{read 3-5}}` = verbatim source paragraphs (quote voice)
+- `SAY` in podcast.py = spoken-only fixes for the reader voice (`&c.` → etcetera, `2:1` → two to one);
+  sources stay verbatim
 
 ## Replacing an episode
 `./pod [--show s] replace <slug> <script>`: same GUID and date (Apple treats it as the same

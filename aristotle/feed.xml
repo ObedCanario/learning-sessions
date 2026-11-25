@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:34:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:03:36 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -182,6 +182,20 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>3</itunes:season>
       <itunes:episode>1</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Physics II · 3 — The Four Causes</title>
+      <description>To know a thing is to know its why. Aristotle's four causes (material, form, maker, and purpose) and how to use them to understand anything. Full chapter read, with commentary.</description>
+      <itunes:summary>To know a thing is to know its why. Aristotle's four causes (material, form, maker, and purpose) and how to use them to understand anything. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/physics-2-03-four-causes.mp3" length="9459190" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">b19c7074-b0b5-40e3-b26c-c2a876359c46</guid>
+      <pubDate>Wed, 25 Nov 2026 12:03:36 +0000</pubDate>
+      <itunes:duration>19:42</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>3</itunes:episode>
       <itunes:explicit>false</itunes:explicit>
     </item>
   </channel>
