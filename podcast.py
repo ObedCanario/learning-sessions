@@ -445,10 +445,10 @@ def make_episode(show: Show, script_path: Path, slug: str, title: str, style_nam
     out = show.audio_dir / filename
     render_audio(body, style, out, title, cfg.get("author", ""))
 
+    # keep a copy of the script with the show, unless it already lives there
     show.scripts_dir.mkdir(exist_ok=True)
-    saved = show.scripts_dir / f"{slug}.md"
-    if script_path.resolve() != saved.resolve():
-        shutil.copyfile(script_path, saved)
+    if script_path.resolve().parent != show.scripts_dir.resolve():
+        shutil.copyfile(script_path, show.scripts_dir / f"{slug}.md")
     if existing and existing["file"] != filename:
         (show.audio_dir / existing["file"]).unlink(missing_ok=True)
 
