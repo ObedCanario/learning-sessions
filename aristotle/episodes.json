@@ -12,5 +12,19 @@
     "version": 1,
     "season": 3,
     "episode": 1
+  },
+  {
+    "slug": "ethics-3-02-what-choice-is",
+    "title": "Ethics III · 2 — What Choice Is",
+    "description": "Choice is not desire, anger, wishing, or belief. Aristotle narrows it down until only one thing is left. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-02-what-choice-is.mp3",
+    "bytes": 4871668,
+    "duration": "10:09",
+    "guid": "12de83a7-8712-4625-ac1d-ae46bc276a1e",
+    "published": "2026-11-25T01:18:48+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 2
   }
 ]

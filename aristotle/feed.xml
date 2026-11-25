@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:17:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:18:48 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 2 — What Choice Is</title>
+      <description>Choice is not desire, anger, wishing, or belief. Aristotle narrows it down until only one thing is left. Full chapter read, with commentary.</description>
+      <itunes:summary>Choice is not desire, anger, wishing, or belief. Aristotle narrows it down until only one thing is left. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-02-what-choice-is.mp3" length="4871668" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">12de83a7-8712-4625-ac1d-ae46bc276a1e</guid>
+      <pubDate>Wed, 25 Nov 2026 01:18:48 +0000</pubDate>
+      <itunes:duration>10:09</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 1 — Willing and Unwilling Actions</title>
       <description>When is something truly your doing? Aristotle separates forced acts and honest mistakes from everything else, which is yours. Full chapter read, with commentary.</description>
