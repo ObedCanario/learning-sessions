@@ -26,5 +26,19 @@
     "version": 1,
     "season": 3,
     "episode": 2
+  },
+  {
+    "slug": "ethics-3-03-thinking-things-through",
+    "title": "Ethics III · 3 — Thinking Things Through",
+    "description": "We only deliberate about what is up to us, and we think about the route, not the destination. Aristotle on how good planning actually works. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-03-thinking-things-through.mp3",
+    "bytes": 5660166,
+    "duration": "11:47",
+    "guid": "5b839413-00be-46fd-904f-773ee371ced1",
+    "published": "2026-11-25T01:20:41+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 3
   }
 ]
