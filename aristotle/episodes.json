@@ -138,5 +138,19 @@
     "version": 1,
     "season": 3,
     "episode": 10
+  },
+  {
+    "slug": "ethics-3-11-temperate-and-self-indulgent",
+    "title": "Ethics III · 11 — The Temperate and the Self-Indulgent",
+    "description": "Natural desires and learned ones, why craving itself hurts, and what the temperate person actually feels. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-11-temperate-and-self-indulgent.mp3",
+    "bytes": 4508298,
+    "duration": "9:23",
+    "guid": "aecdda27-f98f-4451-b720-ea8a7cdf8c20",
+    "published": "2026-11-25T01:33:40+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 11
   }
 ]
