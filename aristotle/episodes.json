@@ -110,5 +110,19 @@
     "version": 1,
     "season": 3,
     "episode": 8
+  },
+  {
+    "slug": "ethics-3-09-courage-is-painful",
+    "title": "Ethics III · 9 — Courage Is Painful",
+    "description": "Why courage hurts, why that is exactly what makes it admirable, and why the person with the best life has the most to lose. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-09-courage-is-painful.mp3",
+    "bytes": 3414670,
+    "duration": "7:07",
+    "guid": "0d63625f-b0f3-485d-81b6-963419c499d0",
+    "published": "2026-11-25T01:30:50+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 9
   }
 ]
