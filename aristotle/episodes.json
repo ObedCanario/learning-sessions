@@ -172,13 +172,14 @@
     "title": "Physics II · 3 — The Four Causes",
     "description": "To know a thing is to know its why. Aristotle's four causes (material, form, maker, and purpose) and how to use them to understand anything. Full chapter read, with commentary.",
     "style": "rohn-study",
-    "file": "physics-2-03-four-causes.mp3",
-    "bytes": 9459190,
-    "duration": "19:42",
+    "file": "physics-2-03-four-causes-v2.mp3",
+    "bytes": 10828006,
+    "duration": "22:33",
     "guid": "b19c7074-b0b5-40e3-b26c-c2a876359c46",
     "published": "2026-11-25T12:03:36+00:00",
-    "version": 1,
+    "version": 2,
     "season": 2,
-    "episode": 3
+    "episode": 3,
+    "updated": "2026-11-25T12:52:42+00:00"
   }
 ]

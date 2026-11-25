@@ -170,6 +170,18 @@ def expand_includes(text: str, script_path: Path | None, strict: bool = True) ->
         sys.exit(f"Chapter {chapter} not found in {src}")
     paras = chapters[chapter]["paras"]
     used: list[int] = []
+    # `notes: host` = [bracketed notes] in the source are editor's notes, read by the host voice
+    notes_host = str(meta.get("notes", "")).strip().lower() == "host"
+
+    def quoted(p: str) -> str:
+        return "\n".join("> " + ln for ln in p.split("\n"))
+
+    def para(p: str) -> str:
+        if not notes_host:
+            return quoted(p)
+        parts = re.split(r"\[([^\]]+)\]", p)
+        return "\n\n".join(part.strip() if k % 2 else quoted(part.strip())
+                           for k, part in enumerate(parts) if part.strip())
 
     def sub(m):
         a = int(m.group(1))
@@ -177,7 +189,7 @@ def expand_includes(text: str, script_path: Path | None, strict: bool = True) ->
         if not (1 <= a <= b <= len(paras)):
             sys.exit(f"{{{{read {a}-{b}}}}} out of range (chapter {chapter} has {len(paras)} paragraphs)")
         used.extend(range(a, b + 1))
-        return "\n\n".join("\n".join("> " + ln for ln in paras[i - 1].split("\n")) for i in range(a, b + 1))
+        return "\n\n".join(para(paras[i - 1]) for i in range(a, b + 1))
 
     body = READ_RE.sub(sub, body)
     missing = sorted(set(range(1, len(paras) + 1)) - set(used))
@@ -201,8 +213,8 @@ def clean_markdown(text: str) -> str:
     text = re.sub(r"(?<!\w)[*_](.+?)[*_](?!\w)", r"\1", text)
     text = re.sub(r"`([^`]*)`", r"\1", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)      # links
-    text = re.sub(r"^\s*[-*+]\s+", "", text, flags=re.M)      # bullets
     text = re.sub(r"^\s*>\s?", "", text, flags=re.M)          # quote markers
+    text = re.sub(r"^\s*[-*+]\s+", "", text, flags=re.M)      # bullets
     text = text.replace("[", "").replace("]", "")             # editorial brackets
     return re.sub(r"\s+", " ", text).strip()
 
@@ -219,8 +231,10 @@ def parse_script(body: str, style: dict) -> list[tuple]:
             continue
         is_quote = all(ln.lstrip().startswith(">") for ln in block.splitlines() if ln.strip())
         who = "quote" if is_quote else "host"
-        heading = block.startswith("#")
-        if heading:
+        # "# Heading", or a paragraph that is all bold (a heading inside a source text)
+        heading = block.startswith("#") or bool(
+            re.fullmatch(r"\*\*[^*]+\*\*", re.sub(r"^\s*>\s?", "", block, flags=re.M).strip()))
+        if block.startswith("#"):
             block = block.lstrip("#").strip()
         pos = 0
         for m in PAUSE_RE.finditer(block):
