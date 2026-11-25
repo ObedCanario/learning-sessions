@@ -152,5 +152,19 @@
     "version": 1,
     "season": 3,
     "episode": 11
+  },
+  {
+    "slug": "ethics-3-12-training-desire",
+    "title": "Ethics III · 12 — Training Desire to Listen to Reason",
+    "description": "Why self-indulgence is more our fault than cowardice, why desire grows when fed, and why it must learn to follow reason like a child follows a good teacher. Full chapter read, with commentary.",
+    "style": "rohn-study",
+    "file": "ethics-3-12-training-desire.mp3",
+    "bytes": 4399836,
+    "duration": "9:10",
+    "guid": "c801604c-e195-4539-a9cc-2992feceabbf",
+    "published": "2026-11-25T01:34:56+00:00",
+    "version": 1,
+    "season": 3,
+    "episode": 12
   }
 ]

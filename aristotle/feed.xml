@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:33:40 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:34:56 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 12 — Training Desire to Listen to Reason</title>
+      <description>Why self-indulgence is more our fault than cowardice, why desire grows when fed, and why it must learn to follow reason like a child follows a good teacher. Full chapter read, with commentary.</description>
+      <itunes:summary>Why self-indulgence is more our fault than cowardice, why desire grows when fed, and why it must learn to follow reason like a child follows a good teacher. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-12-training-desire.mp3" length="4399836" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">c801604c-e195-4539-a9cc-2992feceabbf</guid>
+      <pubDate>Wed, 25 Nov 2026 01:34:56 +0000</pubDate>
+      <itunes:duration>9:10</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>12</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 11 — The Temperate and the Self-Indulgent</title>
       <description>Natural desires and learned ones, why craving itself hurts, and what the temperate person actually feels. Full chapter read, with commentary.</description>
