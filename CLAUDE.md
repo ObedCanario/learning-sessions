@@ -37,5 +37,6 @@ versioned file name (`<slug>-v2.mp3`) so podcast apps re-download the new audio.
 - TTS: edge-tts (Microsoft neural voices, free, no key). List voices: `.venv/bin/edge-tts --list-voices`
 - Setup on a new machine: `python3 -m venv .venv && .venv/bin/pip install edge-tts pillow` (needs ffmpeg)
 
-The feed has `<itunes:block>Yes</itunes:block>` so it never appears in Apple's directory.
-It is unlisted, not secret: anyone with the URL can listen.
+The feed is unlisted, not secret: anyone with the URL can listen. It stays out of Apple's
+directory because it was never submitted to Podcasts Connect. Do NOT set `itunes_block: true`
+in podcast.json: Apple then refuses "Follow a Show by URL" ("server or feed could not be found").

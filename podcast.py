@@ -255,6 +255,8 @@ def build_feed(cfg: dict, episodes: list[dict]) -> None:
       <itunes:explicit>false</itunes:explicit>
     </item>""")
     image = f"{base}/{cfg.get('image', 'cover.jpg')}"
+    # itunes:block makes Apple refuse "Follow a Show by URL", so it's opt-in only
+    block = "    <itunes:block>Yes</itunes:block>\n" if cfg.get("itunes_block") else ""
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
@@ -272,8 +274,7 @@ def build_feed(cfg: dict, episodes: list[dict]) -> None:
     <itunes:category text="{escape(cfg.get('category', 'Education'))}"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
-    <itunes:block>Yes</itunes:block>
-{chr(10).join(items)}
+{block}{chr(10).join(items)}
   </channel>
 </rss>
 """
