@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 23:22:15 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 23:30:44 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Structured Analysis · 4 — Data Flows, Structure Charts, and Good Modules</title>
+      <description>Data-flow diagrams, structure charts, and the two principles that outlasted every method: cohesion and coupling. Plus how all the pieces fit together. Full text read, with commentary.</description>
+      <itunes:summary>Data-flow diagrams, structure charts, and the two principles that outlasted every method: cohesion and coupling. Plus how all the pieces fit together. Full text read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-04-good-modules.mp3" length="8772145" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">cf633e6d-a409-4373-b862-89fa6e4fdbf4</guid>
+      <pubDate>Wed, 25 Nov 2026 23:30:44 +0000</pubDate>
+      <itunes:duration>18:16</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>1</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Structured Analysis · 3 — Follow the Data</title>
       <description>Top-down analysis, DeMarco's four tools, the context diagram, and the data dictionary that keeps a system's words consistent. Full text read, with commentary.</description>
