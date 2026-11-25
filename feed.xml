@@ -8,8 +8,9 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Private audio lessons, generated from my own notes and reading.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 00:58:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:00:31 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
+    <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/cover.jpg"/>
     <image><url>https://obedcanario.github.io/learning-sessions/cover.jpg</url><title>Learning Sessions</title><link>https://obedcanario.github.io/learning-sessions/</link></image>
     <itunes:category text="Education"/>
@@ -20,6 +21,7 @@
       <description>Three ideas on learning that lasts.</description>
       <itunes:summary>Three ideas on learning that lasts.</itunes:summary>
       <enclosure url="https://obedcanario.github.io/learning-sessions/episodes/the-seasons-of-learning-v2.mp3" length="2050193" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/</link>
       <guid isPermaLink="false">96199066-71c5-447a-af68-9746a1a98641</guid>
       <pubDate>Wed, 25 Nov 2026 00:46:59 +0000</pubDate>
       <itunes:duration>2:51</itunes:duration>

@@ -248,6 +248,7 @@ def build_feed(cfg: dict, episodes: list[dict]) -> None:
       <description>{escape(desc)}</description>
       <itunes:summary>{escape(desc)}</itunes:summary>
       <enclosure url="{escape(url)}" length="{ep['bytes']}" type="audio/mpeg"/>
+      <link>{escape(base)}/</link>
       <guid isPermaLink="false">{escape(ep['guid'])}</guid>
       <pubDate>{pub}</pubDate>
       <itunes:duration>{ep['duration']}</itunes:duration>
@@ -269,6 +270,7 @@ def build_feed(cfg: dict, episodes: list[dict]) -> None:
     <language>{cfg.get('language', 'en-us')}</language>
     <lastBuildDate>{now}</lastBuildDate>
     <itunes:author>{escape(cfg.get('author', ''))}</itunes:author>
+    <itunes:owner><itunes:name>{escape(cfg.get('author', ''))}</itunes:name></itunes:owner>
     <itunes:image href="{escape(image)}"/>
     <image><url>{escape(image)}</url><title>{escape(cfg['title'])}</title><link>{escape(base)}/</link></image>
     <itunes:category text="{escape(cfg.get('category', 'Education'))}"/>
@@ -279,6 +281,14 @@ def build_feed(cfg: dict, episodes: list[dict]) -> None:
 </rss>
 """
     FEED.write_text(feed)
+    rows = "".join(f"<li>{escape(e['title'])} <small>({e['duration']})</small></li>"
+                   for e in sorted(episodes, key=lambda e: e["published"], reverse=True))
+    (ROOT / "index.html").write_text(
+        f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width'>"
+        f"<meta name=robots content=noindex><title>{escape(cfg['title'])}</title>"
+        f"<body style='font-family:system-ui;max-width:40em;margin:2em auto;padding:0 1em'>"
+        f"<h1>{escape(cfg['title'])}</h1><p>Feed: <a href='feed.xml'>{escape(base)}/feed.xml</a></p>"
+        f"<ul>{rows}</ul></body>\n")
     print(f"feed.xml updated ({len(episodes)} episodes)")
 
 
