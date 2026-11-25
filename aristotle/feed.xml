@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:21:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:24:49 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 5 — We Are Responsible for Our Character</title>
+      <description>Character is built by repeated actions, so it is ours. The thrown stone, the inner eye, and why you can't wish your way out of a habit. Full chapter read, with commentary.</description>
+      <itunes:summary>Character is built by repeated actions, so it is ours. The thrown stone, the inner eye, and why you can't wish your way out of a habit. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-05-responsible-for-character.mp3" length="7854060" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">ab69efad-db0e-4561-8101-6570d3827e45</guid>
+      <pubDate>Wed, 25 Nov 2026 01:24:49 +0000</pubDate>
+      <itunes:duration>16:22</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 4 — What We Wish For</title>
       <description>Do we wish for what is good, or for what only seems good? Aristotle's answer, the good person as a measuring stick, and why pleasure fools us. Full chapter read, with commentary.</description>
