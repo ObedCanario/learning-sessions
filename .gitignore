@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+preview*.mp3
+inbox/
+.DS_Store

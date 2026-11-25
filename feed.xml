@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning Sessions</title>
+    <link>https://obedcanario.github.io/learning-sessions/</link>
+    <atom:link href="https://obedcanario.github.io/learning-sessions/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Private audio lessons, generated from my own notes and reading.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Nov 2026 00:54:31 +0000</lastBuildDate>
+    <itunes:author>Obed Canario</itunes:author>
+    <itunes:image href="https://obedcanario.github.io/learning-sessions/cover.jpg"/>
+    <image><url>https://obedcanario.github.io/learning-sessions/cover.jpg</url><title>Learning Sessions</title><link>https://obedcanario.github.io/learning-sessions/</link></image>
+    <itunes:category text="Education"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>The Seasons of Learning</title>
+      <description>Three ideas on learning that lasts.</description>
+      <itunes:summary>Three ideas on learning that lasts.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/episodes/the-seasons-of-learning-v2.mp3" length="2050193" type="audio/mpeg"/>
+      <guid isPermaLink="false">96199066-71c5-447a-af68-9746a1a98641</guid>
+      <pubDate>Wed, 25 Nov 2026 00:46:59 +0000</pubDate>
+      <itunes:duration>2:51</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
