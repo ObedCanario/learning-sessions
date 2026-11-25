@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/aristotle/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Aristotle's own words, read in full, with plain-spoken commentary that breaks each idea down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:27:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:29:42 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/aristotle/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Ethics III · 8 — Five Things That Look Like Courage</title>
+      <description>Social pressure, experience, rage, overconfidence, and ignorance can all look like bravery. Aristotle shows why only one motive makes courage real. Full chapter read, with commentary.</description>
+      <itunes:summary>Social pressure, experience, rage, overconfidence, and ignorance can all look like bravery. Aristotle shows why only one motive makes courage real. Full chapter read, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/aristotle/episodes/ethics-3-08-five-imitations-of-courage.mp3" length="6300292" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/aristotle/</link>
+      <guid isPermaLink="false">4781d2e1-010e-472c-a8f8-bb0400066748</guid>
+      <pubDate>Wed, 25 Nov 2026 01:29:42 +0000</pubDate>
+      <itunes:duration>13:07</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>3</itunes:season>
+      <itunes:episode>8</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Ethics III · 7 — The Brave, the Reckless, and the Coward</title>
       <description>Courage is the middle between too much fear and too much boldness. Why the reckless person is often a coward in costume. Full chapter read, with commentary.</description>
