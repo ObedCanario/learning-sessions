@@ -32,16 +32,17 @@
   {
     "slug": "structured-analysis-03-follow-the-data",
     "title": "Structured Analysis · 3 — Follow the Data",
-    "description": "Top-down analysis, DeMarco's four tools, the context diagram, and the data dictionary that keeps a system's words consistent. Full text read, with commentary.",
+    "description": "Top-down analysis, DeMarco's four tools, the empty box that shows a system from the outside, and the data dictionary that keeps everyone's words consistent. Plain English, read in full, with commentary.",
     "style": "rohn-study",
-    "file": "structured-analysis-03-follow-the-data.mp3",
-    "bytes": 8119440,
-    "duration": "16:55",
+    "file": "structured-analysis-03-follow-the-data-v2.mp3",
+    "bytes": 6557526,
+    "duration": "13:40",
     "guid": "d3d6e8b3-ed06-4412-8c9c-ee478398e701",
     "published": "2026-11-25T23:22:15+00:00",
-    "version": 1,
+    "version": 2,
     "season": 1,
-    "episode": 3
+    "episode": 3,
+    "updated": "2026-11-26T13:25:31+00:00"
   },
   {
     "slug": "structured-analysis-04-good-modules",

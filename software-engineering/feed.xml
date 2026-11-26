@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 13:17:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:25:31 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -88,13 +88,13 @@
     </item>
     <item>
       <title>Structured Analysis · 3 — Follow the Data</title>
-      <description>Top-down analysis, DeMarco's four tools, the context diagram, and the data dictionary that keeps a system's words consistent. Full text read, with commentary.</description>
-      <itunes:summary>Top-down analysis, DeMarco's four tools, the context diagram, and the data dictionary that keeps a system's words consistent. Full text read, with commentary.</itunes:summary>
-      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-03-follow-the-data.mp3" length="8119440" type="audio/mpeg"/>
+      <description>Top-down analysis, DeMarco's four tools, the empty box that shows a system from the outside, and the data dictionary that keeps everyone's words consistent. Plain English, read in full, with commentary.</description>
+      <itunes:summary>Top-down analysis, DeMarco's four tools, the empty box that shows a system from the outside, and the data dictionary that keeps everyone's words consistent. Plain English, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-03-follow-the-data-v2.mp3" length="6557526" type="audio/mpeg"/>
       <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
       <guid isPermaLink="false">d3d6e8b3-ed06-4412-8c9c-ee478398e701</guid>
       <pubDate>Wed, 25 Nov 2026 23:22:15 +0000</pubDate>
-      <itunes:duration>16:55</itunes:duration>
+      <itunes:duration>13:40</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>1</itunes:season>
       <itunes:episode>3</itunes:episode>
