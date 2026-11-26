@@ -1,17 +1,18 @@
 [
   {
     "slug": "structured-analysis-01-big-picture",
-    "title": "Structured Analysis · 1 — The Big Picture and Where It Came From",
-    "description": "What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.",
+    "title": "Structured Analysis · 1 — Describe the Work Before You Build It",
+    "description": "Why most failed software is the wrong thing built well, the three parts of every real system, and the chain of ideas from clean code to clear analysis. Plain English, read in full, with commentary.",
     "style": "rohn-study",
-    "file": "structured-analysis-01-big-picture.mp3",
-    "bytes": 6797063,
-    "duration": "14:10",
+    "file": "structured-analysis-01-big-picture-v2.mp3",
+    "bytes": 5423438,
+    "duration": "11:18",
     "guid": "ac0aaf1f-a24c-4409-809e-96cabc284c1e",
     "published": "2026-11-25T23:07:12+00:00",
-    "version": 1,
+    "version": 2,
     "season": 1,
-    "episode": 1
+    "episode": 1,
+    "updated": "2026-11-26T13:08:10+00:00"
   },
   {
     "slug": "structured-analysis-02-breaking-it-down",

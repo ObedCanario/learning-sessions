@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 01:19:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:08:10 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -115,14 +115,14 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>Structured Analysis · 1 — The Big Picture and Where It Came From</title>
-      <description>What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.</description>
-      <itunes:summary>What structured analysis and structured design are, why they were invented, and the chain from programming to design to analysis. Full text read, with commentary.</itunes:summary>
-      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-01-big-picture.mp3" length="6797063" type="audio/mpeg"/>
+      <title>Structured Analysis · 1 — Describe the Work Before You Build It</title>
+      <description>Why most failed software is the wrong thing built well, the three parts of every real system, and the chain of ideas from clean code to clear analysis. Plain English, read in full, with commentary.</description>
+      <itunes:summary>Why most failed software is the wrong thing built well, the three parts of every real system, and the chain of ideas from clean code to clear analysis. Plain English, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/structured-analysis-01-big-picture-v2.mp3" length="5423438" type="audio/mpeg"/>
       <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
       <guid isPermaLink="false">ac0aaf1f-a24c-4409-809e-96cabc284c1e</guid>
       <pubDate>Wed, 25 Nov 2026 23:07:12 +0000</pubDate>
-      <itunes:duration>14:10</itunes:duration>
+      <itunes:duration>11:18</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>1</itunes:season>
       <itunes:episode>1</itunes:episode>

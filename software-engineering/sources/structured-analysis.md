@@ -1,398 +1,164 @@
-# Structured Analysis and Structured Design, Made Plain
-# Source: Wikipedia, "Structured analysis" (CC BY-SA 4.0), plain-English version supplied by the user (2026-11-25).
-# Kept intact except: headings written as bold lines, the two tables written as spoken lists,
-# figure callouts without the '>' marker, and notes addressed to the user left out.
+# Structured Analysis and Structured Design, Made Plain (v2)
+# Source: Wikipedia, "Structured analysis" (CC BY-SA 4.0), https://en.wikipedia.org/wiki/Structured_analysis
+# Rewritten for this show (2026-11-26) from the user's plain-English version (structured-analysis-original.md),
+# following procedures/learning-series.md. The diagrams are now walked through with one pizza-shop example.
+# Cut as non-essential: the full timeline (Nassi–Shneiderman, Warnier/Orr, HIPO, Hatley–Pirbhai,
+# information engineering, and more), and the list of published methodologies other than SSADM.
 
-Chapter 1: The Big Picture and Where It Came From
+Chapter 1: Describe the Work Before You Build It
 
-**0. The big picture first**
+**What structured analysis and structured design are**
 
-**🔧 First principles.** A business already does its work somehow: people take orders, fill out forms, pass papers around. One day it wants a computer to do some of that work. But a computer can't guess. Before anyone builds anything, someone has to describe exactly what the work is: what comes in, what happens to it, and what goes out. Structured analysis is a careful way of writing that description. Structured design is a careful way of turning the description into a plan for the actual program.
+A business already does its work somehow. People take orders, fill out forms, and pass papers around. One day, the business wants a computer to do some of that work. But a computer can't guess. Before anyone builds anything, someone has to describe exactly what the work is: what comes in, what happens to it, and what goes out.
 
-**🍳 Analogy.** Picture a busy restaurant that runs on paper tickets. The owner wants a computer system to run orders. Before a programmer writes any code, someone stands in the kitchen and maps how an order travels: from the customer, to the waiter, to the cook, to the plate, to the bill. That map is the analysis. The blueprint for the software is the design.
+Structured analysis is a careful way of writing that description. Structured design is a careful way of turning the description into a plan for the actual program. Together, they help with two jobs. The first job is to work out what the business really needs. The second is to write precise instructions, called specifications, for turning the business's way of working into a computer system.
 
-**1. What structured analysis and structured design are**
+**A system is more than software**
 
-In software engineering, **structured analysis (SA)** and **structured design (SD)** are methods. They help you do two jobs:
-1. Analyze business requirements, meaning figure out what the business actually needs.
-2. Develop specifications, meaning precise written instructions, for turning the business's way of working into three things:
-   - computer programs (the software);
-   - hardware configurations (which machines are needed, and how they're set up);
-   - related manual procedures (the steps people still do by hand around the computer).
+Those specifications cover three things, not one. The first is the computer programs, the software itself. The second is the hardware: which machines are needed, and how they're set up. The third is the manual procedures: the steps that people still do by hand around the computer.
 
-**🍳 Analogy.** For the restaurant, that means: the ordering app (program), the tablets and kitchen printer (hardware), and the rule "the waiter checks the ticket before sending it" (manual procedure).
+Picture a pizza shop that wants to take orders through an app. The program is the ordering app. The hardware is the customers' phones, the tablet behind the counter, and the printer in the kitchen. And a manual procedure is a rule like this one: the cook checks each ticket before the pizza goes into the oven. Leave out any one of the three, and the system doesn't work.
 
-Structured analysis and design techniques are basic tools of **systems analysis**, the job of studying how a system works and what it needs. They grew out of the "classical" systems analysis of the 1960s and 1970s.
+These methods are basic tools of systems analysis, the job of studying how a system works and what it needs. They grew out of the classic systems analysis of the 1960s and 1970s.
 
-**🖼️ Figure: "Example of a structured analysis approach."** This is the article's opening picture. Its caption only says it is an example of the approach. From the rest of the article, a picture like this shows a system broken into processes and data, with the big picture splitting into smaller and smaller parts.
+**Why these methods were invented**
 
-**2. History: where these methods came from**
+From the 1960s to the 1980s, a family of "structured methods" grew up to solve four problems. Most business programs were written in languages like COBOL and Fortran, and later C and BASIC. There was little guidance on how to design and program well. There was no standard way to write down what a system needed, or how it should be built. And systems kept getting bigger and more complex, so they kept getting harder to build.
 
-**🔧 First principles.** Methods appear when there's a problem. Here, the problem was that software was getting big and messy, and nobody had agreed rules for designing it well.
+Picture a kitchen where every cook invents their own way to write order tickets. In a food truck, that works fine. In a hotel kitchen that feeds five hundred people, it's chaos. The structured methods were the shared ticket format.
 
-Structured analysis belongs to a family of "structured methods" for analysis, design, and programming. They were developed from the 1960s to the 1980s to deal with problems in making software:
-- Most business programming was done in the languages COBOL and Fortran, and later C and BASIC.
-- There was little guidance on how to design and program well.
-- There were no standard ways to write down requirements (what's needed) and designs (how to build it).
-- Systems kept getting bigger and more complex, so building them kept getting harder.
+**The key names and dates**
 
-**🍳 Analogy.** Imagine every restaurant kitchen inventing its own way to write tickets, with no shared format. It works for a food truck. In a 500-seat hotel kitchen, it's chaos. Structured methods were the shared ticket format.
+The methods arrived one after another. In the late 1960s, Edsger Dijkstra's famous letter, "Go To Statement Considered Harmful," launched structured programming: writing each program in clean, orderly blocks. In 1971, Niklaus Wirth described stepwise design. Around 1975, Larry Constantine, Ed Yourdon, and Wayne Stevens gave us structured design. Around 1978, Tom DeMarco, Ed Yourdon, and others gave us structured analysis, and DeMarco wrote the classic book on it. Douglas Ross created a related method, called SADT, which later became IDEF0. In 1983, the British government introduced a complete method, called SSADM. And in 1989, Yourdon wrote Modern Structured Analysis.
 
-From the late 1960s, structured methods appeared one after another:
+**The chain of ideas**
 
-1967: Structured programming, with the paper "Go To Statement Considered Harmful." By Edsger Dijkstra.
+The writer David Hay said these methods grew out of each other in a chain: first structured programming, then structured design, then structured systems analysis. People first learned to write one program cleanly. Then they learned to arrange many program pieces cleanly. Then they learned to describe the whole business need cleanly, before building anything at all. Each step zooms out from the one before.
 
-1971: Stepwise design. By Niklaus Wirth.
-
-1972: The Nassi–Shneiderman diagram.
-
-1974: The Warnier/Orr diagram, from *Logical Construction of Programs*.
-
-1974: HIPO: "hierarchy, input, process, output" (the article notes it should really be read as output, input, process). By IBM.
-
-About 1975: Structured design. By Larry Constantine, Ed Yourdon, and Wayne Stevens.
-
-About 1975: Jackson structured programming. By Michael A. Jackson.
-
-About 1978: Structured analysis. By Tom DeMarco, Edward Yourdon, Gane & Sarson, and McMenamin & Palmer.
-
-Structured analysis and design technique (SADT). By Douglas T. Ross.
-
-The Yourdon structured method. By Edward Yourdon.
-
-1978: The book *Structured Analysis and System Specification*. By Tom DeMarco.
-
-1983: The structured systems analysis and design method (SSADM), first presented. By the UK Office of Government Commerce.
-
-Essential Systems Analysis. By Stephen M. McMenamin and John F. Palmer.
-
-1985: IDEF0, based on SADT. By Douglas T. Ross.
-
-1988: Hatley–Pirbhai modeling, from *Strategies for Real-Time System Specification*. By Derek J. Hatley and Imtiaz A. Pirbhai.
-
-1989: *Modern Structured Analysis*, written after Essential Systems Analysis. By Edward Yourdon.
-
-About 1990: Information technology engineering, popularized by James Martin. By Finkelstein.
-
-David C. Hay (1999) said information engineering grew logically out of the 1970s structured techniques. The chain went:
-
-**structured programming → structured design → structured systems analysis.**
-
-All of these used diagrams, such as structure charts and data-flow diagrams, to help people communicate and to keep the work disciplined. In the 1980s, software tools appeared that drew these diagrams automatically and kept track of the items in a data dictionary. Following the example of CAD/CAM (computer-aided design and manufacturing, used in engineering), these tools were called **CASE**: computer-aided software engineering.
-
-**🔧 First principles on the chain.** People first learned to write a single program cleanly (programming). Then they learned to arrange many program pieces cleanly (design). Then they learned to describe the whole business need cleanly before building anything (analysis). Each step zooms out from the one before.
+All of these methods used diagrams, such as structure charts and data-flow diagrams, to help people talk to each other and to keep the work disciplined. In the 1980s, software tools appeared that drew these diagrams automatically and kept track of every item in a data dictionary. Engineers already had computer-aided design tools for machines and buildings, so these new tools were called CASE tools, short for computer-aided software engineering.
 
 Chapter 2: Breaking a System Down
 
-**3. What structured analysis tries to do**
+**Data and control**
 
-Structured analysis became popular in the 1980s. The article says it is still used today, though that claim is marked "citation needed," meaning no source backs it up yet.
+Structured analysis became popular in the 1980s. Its core job is to take an idea for a system, or a real-world situation, and translate it into two kinds of things: data, which is information such as an order, a price, or a name, and control, which is a signal telling part of the system when to act, or whether to act at all, such as "start," "stop," or "the order is ready."
 
-**Its core job:** take the idea of the system, or a real-world situation, and translate it into **data** terms and **control** terms. These are drawn as **data-flow diagrams**.
-- **Data** = information: an order, a price, a name.
-- **Control** = signals that tell parts of the system *when* or *whether* to act: "start," "stop," "order is ready."
+Both are drawn in data-flow diagrams, where each process, meaning a step that does work, is drawn as a circle called a bubble, and information that is kept for later sits in a data store. The method has a known weakness: following the data from a bubble, to a store, to another bubble can get difficult to track, and the number of bubbles can keep growing. With five bubbles, the picture is clear. With eighty, it looks like a plate of spaghetti.
 
-In these diagrams, each process (a step that does work) is drawn as a **bubble**, and stored information sits in a **data store**.
+**How to build the diagram**
 
-**A known problem:** following data and control as they go from a bubble, to a data store, to another bubble can get hard to track. And the number of bubbles can keep growing.
+One way to build the diagram has four steps. First, start from outside events: list the things in the outside world that the system must react to. For the pizza shop, a customer places an order, a customer pays, and a supplier delivers flour and cheese. Second, give each event its own bubble, the process that responds to it. Third, connect the bubbles that need to work together, until the whole system is described. Fourth, group small bubbles into bigger ones, to cut down the clutter. For example, "take the order," "confirm the order," and "send it to the kitchen" can fold into one bigger bubble called "Ordering."
 
-**🍳 Analogy.** Draw every step of the kitchen as a circle: "take order," "cook," "plate," "bill." Draw the fridge and the order spike as storage boxes. Now trace one burger from circle to fridge to circle to spike. With 5 circles it's easy. With 80, it's spaghetti.
+Two documents go with the diagram: a data dictionary, which says exactly what each piece of information contains, and a process specification, which says exactly what each process does with it. The diagram shows that an order flows from one bubble to another, but only the dictionary can say what an order is made of, and only the process specification can say what happens to it next.
 
-**One way to build the diagram**
+Altogether, structured analysis and design use three kinds of diagram: structure charts, which show how a program's parts are arranged; data-flow diagrams, which show how information moves; and data-model diagrams, which show how stored information is organized. These techniques were later bundled into complete, step-by-step recipes for building a system, such as SSADM.
 
-1. **Start from outside events.** List the things in the outside world that the system must react to.
-   *🍳 A customer orders. A supplier delivers. A customer pays.*
-2. **Give each event its own bubble.** Each bubble is the process that responds to that event.
-3. **Connect the bubbles that need to work together.** Keep going until the whole system is described.
-4. **Group bubbles into bigger bubbles.** This cuts down complexity.
-   *🍳 "Take order," "send to kitchen," and "confirm order" can all fold into one bigger bubble called "Ordering."*
+**One way to zoom**
 
-Two supporting documents are needed:
-- **Data dictionaries** describe the data flows and command flows. They say exactly what each piece of information is.
-- **Process specifications** record what each process does to the information: the transaction or transformation it performs.
+To abstract means to hide detail on purpose, so you can think about the big picture. "Make dinner" is an abstraction, and "chop the onions, heat the pan, add the oil" is the detail hidden inside it. Structured analysis builds a top-to-bottom tree with only one way to zoom: breaking a job into smaller jobs. Run the pizza shop. Inside that, make the pizzas. Inside that, bake the pizza. It never switches to a different kind of view, such as "who is this person?" or "what does this screen look like?" It's always a job inside a job.
 
-**🔧 First principles.** A diagram shows *that* an order flows from A to B. It can't show what an order *contains* (that's the dictionary's job) or exactly *what B does with it* (that's the process spec's job). You need all three to describe a system fully.
+The method starts with the work being done, not with things or screens. It begins with a purpose, which is why we're describing the system, and a viewpoint, which is whose eyes we're looking through. Then it finds the overall job and keeps dividing it, tracking four things for each job: inputs, which are what comes in to be worked on; outputs, which are what comes out; controls, which are the rules or signals that govern the work; and mechanisms, which are the people or tools that do it.
 
-**How SA and SD are drawn, and who drew them**
+**Picture the box diagram**
 
-SA and SD are shown with three kinds of diagram:
-- **structure charts** (how a program's parts are arranged);
-- **data-flow diagrams** (how information moves);
-- **data-model diagrams** (how stored information is organized).
+A diagram style called IDEF0 draws all four on a single box. Picture a box labeled "Bake the pizza." An arrow comes in from the left: the input, a raw pizza. An arrow leaves on the right: the output, a baked pizza. An arrow comes down from the top: the control, the order ticket that says "extra crispy." And an arrow comes up from the bottom: the mechanism, the cook and the oven. Left is what goes in, right is what comes out, the top is the rules, and the bottom is who does the work. Then you can open the box. Inside are three smaller boxes, set out like a staircase: "put it in the oven," "check it at ten minutes," and "take it out and slice it," with an arrow passing from each step to the next.
 
-There were many versions of these. They were developed by Tom DeMarco, Ken Orr, Larry Constantine, Vaughn Frick, Ed Yourdon, Steven Ward, Peter Chen, and others.
+This approach is called functional decomposition, which means breaking the work down into its jobs. It pays attention to two things: cohesion, meaning everything inside one job belongs together, and coupling, meaning how much separate jobs depend on each other.
 
-These techniques were then bundled into full published **methodologies**, step-by-step recipes for building a system from start to finish. Examples:
-- Structured systems analysis and design method (SSADM)
-- Profitable information by design (PRIDE)
-- Nastec structured analysis & design
-- SDM/70
-- Spectrum structured system development methodology
+**What it shows well, and what it doesn't**
 
-**4. One way of zooming: the "single abstraction mechanism"**
+Functional decomposition shows what jobs get done, but not how the system behaves from moment to moment. It shapes the system as a list of required jobs, with the inputs and outputs of each one. It's popular because it's intuitive, and it communicates big processes clearly, for one system or for a whole organization. Its weak spot is object-oriented development, the most common style in the industry, because it's unclear how objects would carry out these jobs.
 
-**🔧 First principles: what "abstraction" means.** To abstract is to hide detail so you can think about the big picture. "Make dinner" is an abstraction. "Chop onions, heat pan, add oil" is the detail inside it. An **abstraction mechanism** is the *method* you use to hide or reveal detail.
+Structured analysis organizes the world by jobs: take the order, bake, deliver. Object-oriented development organizes it by things that hold their own data and abilities: an Order that knows its own pizzas and can add up its own price, a Customer, a Driver. The two cut the world in different directions, so it's hard to map one onto the other.
 
-Structured analysis usually builds a **hierarchy**, a top-to-bottom tree, using **only one abstraction mechanism**: breaking a function (a job the system does) into smaller functions.
-
-**🍳 Analogy.** There's only one way to zoom in on the restaurant: "What job is this, and what smaller jobs make it up?" "Run the restaurant" → "Serve food" → "Cook" → "Grill the burger." You never switch to a different kind of view, like "Who is this person?" or "What does this screen look like?" It's always "job inside job."
-
-How the method works:
-- It can use **IDEF** (see figure below).
-- It is **process driven**: it starts with the work being done, not with things or screens.
-- It starts with a **purpose** (why we're modeling this) and a **viewpoint** (whose eyes we're looking through).
-- It finds the **overall function**, then keeps dividing functions into smaller ones, one step at a time.
-- At each split it keeps track of four things for every function:
-  - **inputs**: what comes in to be worked on;
-  - **outputs**: what comes out;
-  - **controls**: rules or signals that govern the work;
-  - **mechanisms**: the people or tools that do the work.
-  Keeping these lets you improve the processes.
-
-*🍳 For "Grill the burger": input = raw patty; output = cooked patty; control = the ticket saying "medium"; mechanism = the cook and the grill.*
-
-This is also called the **functional decomposition** approach ("decompose" = break into parts). It focuses on two things:
-- **cohesion within functions**: everything inside one function belongs together;
-- **coupling between functions**: how much separate functions depend on each other.
-
-Paying attention to both leads to well-organized ("structured") data.
-
-**🖼️ Figure: "Structured analysis example."** The article says this method "can employ IDEF (see figure)," so this picture is an IDEF-style example. In IDEF0, each function is a box. Inputs enter from the left, outputs leave on the right, controls come in from the top, and mechanisms come in from the bottom. A big box is then broken into a few smaller boxes, usually set out like a staircase, with arrows passing between them.
-
-**What this approach shows well, and what it doesn't**
-
-- Functional decomposition **describes the process without spelling out the system's behavior**. It shows what jobs get done, not how the system acts and reacts moment to moment.
-- It **sets the system's structure as a list of required functions**. The system is shaped like its jobs.
-- It identifies **inputs and outputs** as they relate to each activity.
-- **Why it's popular:** it's intuitive. It communicates high-level processes and ideas clearly, whether for one system or a whole enterprise (a big organization with many systems).
-- **Its weak spot:** it is unclear how *objects* would support these *functions* in object-oriented development, which is the most common style in the industry.
-
-**🔧 First principles: functions vs. objects.** Structured analysis organizes everything around *jobs* ("cook," "bill"). Object-oriented development organizes everything around *things* that hold their own data and abilities ("an Order," "a Table," "a Cook"). The two cut the world in different directions, so it's hard to map one onto the other.
-
-*🍳 Structured analysis files the kitchen by task: the grilling station, the billing station. Object-oriented thinking files it by thing: each Order carries its own items, status, and price, and knows how to total itself.*
-
-**The contrast with UML.** IDEF is process driven with one abstraction mechanism. **UML** (Unified Modeling Language, the standard diagram language for object-oriented design) is different:
-- it is **interface driven**: it starts from how parts connect and talk to each other;
-- it has **multiple abstraction mechanisms**: several different ways to zoom and view a system.
-
-That makes UML useful for describing **service-oriented architectures (SOAs)**: systems built from separate services that talk to each other through agreed connections.
-
-*🍳 An SOA restaurant runs as separate counters (orders, kitchen, payments), each with a service window. What matters most is the window: what you can hand through it and what you get back. UML is built to describe windows. IDEF is built to describe jobs.*
+UML, the standard diagram language for object-oriented design, works differently from IDEF0. It starts from how parts connect and talk to each other, and it has several ways to zoom, not just one. That makes it useful for describing service-oriented systems, which are built from separate services that talk through agreed connections. Picture the pizza shop run as separate counters for orders, the kitchen, and payments, each with its own service window. In that kind of system, what matters most is the window: what you can hand through it, and what you get back.
 
 Chapter 3: Follow the Data
 
-**5. The approach: follow the data**
+**Follow the data**
 
-Structured analysis looks at a system **from the point of view of the data flowing through it.**
+Structured analysis looks at a system from the point of view of the data flowing through it. What the system does is described as processes that change data: data comes in, gets changed, and goes out. It hides detail by breaking things down level by level, which is called top-down analysis. You look at the top level first, and then open up one part at a time, so your attention stays on the details that matter right now. The trade-off is that as the detail goes up, the breadth goes down. It's like a map app. Zoomed out, you see the whole country, but no streets. Zoomed in, you see every street, but only in one neighborhood.
 
-- What the system *does* is described as **processes that transform data flows**. Data comes in, gets changed, and goes out.
-- It uses **information hiding** through **successive decomposition**, also called **top-down** analysis. You look at the top level first, then open up one part at a time.
-- **Why:** this keeps your attention on the details that matter right now, and avoids confusion from looking at details that don't.
-- **The trade-off:** as the detail goes up, the breadth goes down. Each deeper diagram shows more about a smaller slice.
+What you end up with is a set of linked diagrams, process descriptions, and data definitions: two halves that fit together, the processes, which are what gets done, and the data, which is what gets used.
 
-*🍳 A map app: zoomed out, you see the whole country with no streets. Zoomed in, you see every street, but only of one neighborhood. You can't see both at once, and you don't need to.*
+**DeMarco's four tools**
 
-**What you end up with:** a set of linked graphical diagrams, process descriptions, and data definitions. Together they describe the **transformations** that must happen and the **data** needed to meet the system's **functional requirements** (the things it must be able to do).
+Tom DeMarco's approach uses four tools: the context diagram, the data-flow diagram, the process specification, and the data dictionary.
 
-**🖼️ Figure: "The structured analysis approach develops perspectives on both process objects and data objects."** This picture shows the approach as two connected sides. One side is **processes**: what gets done, shown in diagrams and process specs. The other side is **data**: what gets used, defined in the data dictionary. The article introduces DeMarco's four objects with "(see figure)," so the picture shows how those four fit together.
+A data-flow diagram is what mathematicians call a directed graph. A graph, here, means dots connected by lines, and directed means each line has an arrow pointing one way. The arrows stand for data, and the dots, drawn as bubbles, stand for processes that change the data.
 
-**DeMarco's approach: the four pieces**
+Any bubble can be opened up into a more detailed diagram of its own, showing the smaller steps inside it and the data passing between them. Those steps can be opened up again, and so on, until each one's job is easy to understand. A step that doesn't need breaking down any further is called a functional primitive, the smallest useful piece. Each one gets a short, precise description, called a mini-spec. A mini-spec can be written as pseudo-code, which is program-like steps in plain words, as a flowchart of boxes and arrows, or in structured English, which is plain English with strict rules. For example: if the pizza is extra crispy, then bake it for two more minutes.
 
-Tom DeMarco's approach is made of four objects:
-1. **Context diagram**
-2. **Data-flow diagram**
-3. **Process specifications**
-4. **Data dictionary**
+Here's how the opening up works. "Make the pizza" opens into "add the toppings," "bake," and "slice." "Slice" opens into "move it to the board," "cut eight pieces," and "box it." "Cut eight pieces" is so simple that opening it further is pointless, so it's a functional primitive. Its mini-spec might just say: cut the pizza into eight equal slices.
 
-**Data-flow diagrams (DFDs) are "directed graphs."**
+**The data dictionary**
 
-*🔧 A graph here means dots connected by lines. "Directed" means each line has an arrow: it goes one way.*
+The data dictionary is a set of definitions for every flow of data, every data element, every file, and every database. The entries go from big items to small ones, and they can point to each other. For example: an order is a customer, a list of pizzas, a delivery address, and the time it was placed. And then: a pizza is a size, a crust, and a list of toppings. The second entry is used inside the first, and every arrow labeled "order," on every diagram, points back to that one definition.
 
-- The **arcs** (arrows) represent **data**.
-- The **nodes** (circles, or "bubbles") represent **processes** that transform the data.
+**The context diagram: the system from the outside**
 
-**Breaking it down:**
-- Any process can be opened up into a more detailed DFD. That diagram shows the **subprocesses** and the data flowing between them.
-- Those subprocesses can be opened up again with another set of DFDs, and so on, until each one's job is easy to understand.
-- A process that doesn't need breaking down any further is called a **functional primitive**: the smallest useful piece.
-- Each functional primitive is described by a **process specification**, also called a **mini-spec**. A mini-spec can be written as:
-  - **pseudo-code**: program-like steps in plain words, not real code;
-  - **flowcharts**: boxes and arrows showing steps and decisions;
-  - **structured English**: plain English with strict, simple rules ("IF the steak is rare THEN grill 3 minutes").
+A context diagram shows the actors outside a system that could interact with it. Actors can be people, organizations, or other systems. It's the highest-level view of a system: a simple picture of boxes and lines. It shows the whole system, which may or may not be software, with its inputs and outputs to and from the outside world. As one textbook puts it, the system sits at the center, with no details of its inside, surrounded by everything it interacts with.
 
-*🍳 "Cook the order" opens into "grill," "fry," "plate." "Grill" opens into "check temperature," "place patty," "flip," "remove." "Flip" is so simple that opening it further is pointless. That makes it a functional primitive, and it gets a mini-spec: "After 3 minutes, flip once."*
+Picture it for the pizza shop. One box sits in the middle, labeled "Pizza Shop System," with nothing drawn inside it. Around it are four outside actors, each joined to the middle by labeled arrows. The customer sends in orders and payments, and gets back pizzas and receipts. The payment company receives card charges, and sends back approvals or declines. The delivery driver gets addresses, and sends back "delivered." And the supplier gets purchase orders, and sends back flour, cheese, and an invoice.
 
-- Altogether, the DFDs model the system's structure as a **network of connected processes**, built up from functional primitives.
+The goal is to focus attention on the outside events you must consider, so you can build a complete set of requirements, which are the things the system must do, and constraints, which are the limits it must work within.
 
-**The data dictionary:**
-- It is a set of entries (definitions) for **data flows, data elements, files, and databases**.
-- The entries are organized **top-down**, from big items to small ones.
-- Entries can be referenced by other entries, and from the data-flow diagrams.
+**The database's table of contents**
 
-*🍳 Dictionary entry: "Order = table number + list of items + time placed." Then: "Item = dish name + quantity + special request." The second entry is used inside the first, and the arrow labeled "Order" on the DFD points to this entry.*
+A data dictionary can also mean a file that defines how a database is organized. It lists every file in the database, the number of records in each one, and the name and type of each field. A record is one entry, like one customer. A field is one slot in that record, like a phone number, and its type says whether it holds text, a number, or a date. Most database software hides this file from users, so nobody destroys it by accident. It holds no actual data, only bookkeeping. And yet without it, the database can't reach its data at all. It's like the labels in a pantry: the labels contain no food, but without them, nobody can find anything.
 
-**6. The context diagram: the system from the outside**
+**Picture the entity-relationship diagram**
 
-**🖼️ Figure: "Example of a system context diagram."** One box sits in the middle: the system, with nothing shown inside it. Around it are the outside people and systems it deals with, joined to the middle box by arrows labeled with what flows in or out.
+A related picture, called an entity-relationship diagram, is essential for designing database tables. It draws the things a database stores, called entities, as boxes, and the lines between the boxes show how they relate. For the pizza shop, picture three boxes: Customer, Order, and Pizza. A line from Customer to Order says "one customer places many orders." A line from Order to Pizza says "one order contains one or more pizzas." In one glance, you can see how the stored information hangs together.
 
-**What it is:** a context diagram shows the **actors outside a system** that could interact with it. "Actors" are people, organizations, or other systems.
+**A shared document for people**
 
-- It is the **highest-level view** of a system, similar to a **block diagram** (a simple boxes-and-lines picture).
-- It shows the whole system, which may or may not be software, along with its **inputs and outputs** to and from **external factors**.
-
-According to Kossiakoff (2003), this diagram usually "pictures the system at the center, with no details of its interior structure, surrounded by all its interacting systems, environment and activities."
-
-The **goal** is to focus attention on the **outside** factors and events you need to consider to build a **complete set of system requirements and constraints**. Requirements are what it must do. Constraints are the limits it must work within.
-
-- Context diagrams are related to data-flow diagrams. They show the interactions between the system and the other actors it is designed to deal with.
-- They help you understand the setting the system will fit into, as part of software engineering.
-
-**🔧 First principles.** Before you study the inside of anything, list everything that touches it from outside. Miss one outside actor and you miss a whole set of requirements.
-
-*🍳 The restaurant as one sealed box. Around it: Customers (send orders and payments, get food and receipts), Suppliers (deliver ingredients, receive purchase orders), the Bank (receives card payments), the Health Inspector (receives reports). Forget the Health Inspector, and nobody builds the report feature.*
-
-**7. The data dictionary: the database's table of contents**
-
-**🖼️ Figure: "Entity–relationship diagram, essential for the design of database tables, extracts, and metadata."** An entity–relationship diagram draws the *things* a database stores (entities, like Customer or Order) as boxes. Lines between the boxes show how those things relate ("a Customer places many Orders"). The caption says it is essential for designing **database tables** (where data is stored), **extracts** (pulled-out copies of data), and **metadata** (data about data).
-
-**What it is:** a **data dictionary**, or database dictionary, is a file that defines how a database is basically organized.
-
-It contains:
-- a list of all **files** in the database;
-- the **number of records** in each file (*a record is one entry, like one customer*);
-- the **names and types** of each **data field** (*a field is one slot in a record, like "phone number," and its type says whether it holds text, a number, a date, and so on*).
-
-Also:
-- Most **database management systems** (the software that runs a database) **hide** the data dictionary from users, so nobody accidentally destroys it.
-- It holds **no actual data**, only **bookkeeping** information for managing the database.
-- **Yet without it, the database system can't get at the data at all.**
-
-*🍳 It's like the kitchen's labeling system: which shelf holds what, how many containers are on each shelf, and what each label means. It contains no food. But without it, nobody can find anything, so it's useless to have the food at all.*
-
-**The data dictionary as a document for people.** Database users and developers benefit from an **authoritative** (official, trusted) data dictionary *document* that catalogs the organization, contents, and conventions (agreed habits and rules) of one or more databases. It usually includes:
-- the names and descriptions of the **tables** and **fields** in each database;
-- extra details, such as the **type** and **length** of each data element.
-
-Some more points:
-- There's **no universal standard** for how detailed it should be.
-- It is mainly a summary of **metadata** about the database's **structure**, not the data itself.
-- It may also explain how data elements are **encoded** (*for example, "M = medium, W = well done"*).
-- **Main benefit:** a well-made one keeps things **consistent** across a complex database, or across a large group of **federated databases** (separate databases that work together as one).
-
-*🍳 A chain of 50 restaurants. If one kitchen writes "MED," another "M," and another "medium," the head office can't combine the reports. One shared dictionary fixes that.*
+Developers and users also benefit from an official data dictionary document, which lists the tables and fields in each database, with details like each field's type and length. It may also explain codes, such as "S" for small, "M" for medium, and "L" for large. Its main benefit is consistency. Picture a chain of fifty pizza shops. If one shop writes "LG," another writes "L," and another writes "large," head office can't combine their sales reports. One shared dictionary fixes that.
 
 Chapter 4: Data Flows, Structure Charts, and Good Modules
 
-**8. Data-flow diagrams: how information moves**
+**Data-flow diagrams: how information moves**
 
-**🖼️ Figure: "Data-flow diagram example."** A typical DFD shows processes as circles or rounded boxes, data stores as open-ended boxes or parallel lines, outside actors as squares, and arrows labeled with the data that moves between them.
+A data-flow diagram is a picture of how data moves through an information system. It's different from a system flowchart: a data-flow diagram shows data moving through processes, while a flowchart shows it moving through hardware. The first says the order goes from "take the order" to "make the pizza." The second says it goes from the customer's phone to the kitchen printer. The idea came from Larry Constantine, who also developed structured design.
 
-**What it is:** a **data-flow diagram (DFD)** is a picture of how data "flows" through an information system.
+The usual order of work has three steps. First, draw a context diagram showing how the system deals with the outside world. Next, draw a data-flow diagram that splits the system into smaller parts, and shows the data flowing between them. Then "explode" it, which means opening each part up to show more detail.
 
-- **How it differs from a system flowchart:** a DFD shows data moving through **processes**. A system flowchart shows it moving through **computer hardware**.
-  *🍳 A DFD says "the order goes from Taking Orders to Cooking." A hardware flowchart says "the order goes from the tablet to the kitchen printer."*
-- **Who invented it:** Larry Constantine, who also developed structured design. He based it on Martin and Estrin's "data-flow graph" model of computation.
+**Picture the data-flow diagram**
 
-**The usual order of work:**
-1. First, draw a **system context diagram** showing how the system interacts with outside entities.
-2. The DFD then shows how the system is **divided into smaller parts**, and highlights the **data flowing between** those parts.
-3. This context-level DFD is then "**exploded**": opened up to show more detail of the system being modeled.
+A data-flow diagram uses four kinds of shapes. Circles are processes. Open-ended boxes are data stores. Squares are outside actors. And arrows, labeled with the data they carry, show the movement. Now picture one for the pizza shop. Start at the square labeled "Customer." An arrow labeled "order" runs to the first circle, "Take Order." From there, an arrow labeled "card details" runs to a circle called "Check Payment," and an arrow labeled "approved" comes back. "Take Order" saves the order in a store called "Orders," and sends a "pizza ticket" to the circle "Make Pizza." "Make Pizza" sends a "ready" signal to the circle "Deliver," which reads the address from the Orders store, and sends the pizza back out to the Customer square. Trace that loop once with your finger, and you understand the whole business.
 
-**Why DFDs matter:**
-- They are one of the **three essential perspectives** of SSADM. *(The article doesn't name the other two here.)*
-- The project's **sponsor** (who pays for it) and its **end users** (who will use it) need to be briefed and consulted at every stage of the system's development.
-- With a DFD, users can **see**:
-  - how the system will operate;
-  - what it will accomplish;
-  - how it will be implemented (built).
-- You can draw the **old system's** DFDs and the **new system's** DFDs, then compare them, to build a more efficient system.
-- DFDs give end users a concrete sense of where the data they enter ends up affecting the whole system, "from order to dispatch to recook." *(That's the article's phrase. It traces data from the first order, through sending it out, to redoing it, such as a dish sent back to the kitchen.)*
-- **How any system is developed can be worked out from a DFD.**
+**Why data-flow diagrams matter**
 
-*🍳 The waiter types "no onions." The DFD lets the waiter see that note travel: to the kitchen screen, to the cook, onto the bill, into the "complaints" store if it goes wrong, and back to "recook." Now the waiter understands why typing it correctly matters.*
+In the complete method called SSADM, data flow is one of three essential points of view. The people paying for a project, and the people who will use it, need to be consulted at every stage, and a data-flow diagram lets them see how the system will work, what it will do, and how it will be built. You can draw the old system and the new one, and compare them. And users can see how the data they type in affects the whole system. If a customer types "no olives," the diagram shows that note traveling to the kitchen ticket, onto the receipt, and into the complaints store if the pizza comes out wrong. Now everyone understands why it has to be typed correctly.
 
-**9. Structure charts: the program's family tree**
+**Structure charts: the program's family tree**
 
-**🖼️ Figure: "A configuration system structure chart."** A tree of boxes. One box at the top stands for the whole system. Below it are branches of smaller boxes, down to the lowest pieces that can still be managed.
+A structure chart shows how a system breaks down into its lowest manageable levels. It arranges the program's modules, which are self-contained pieces of a program, in a tree. Each module is a box with its name inside, and the tree shows how the modules relate.
 
-**What it is:** a **structure chart (SC)** shows how a system's configuration breaks down into its **lowest manageable levels**.
+Picture one for the pizza shop. At the top is one box: "Pizza Shop System." Below it are three boxes: "Ordering," "Kitchen," and "Delivery." Below "Ordering" are three more: "Show the Menu," "Build the Cart," and "Take Payment." Each line in the tree means that the box above calls on the box below to do part of its job. Each bottom box is small enough to hand to one programmer, who knows exactly where their piece fits.
 
-- It is used in **structured programming** to arrange the program's **modules** (self-contained pieces of a program) in a **tree** shape.
-- Each module is a **box** with the module's name in it.
-- The tree shows how the modules relate to each other.
+Structure charts lay out the high-level design, or architecture, of a program. They help a programmer divide and conquer a large problem, by breaking it again and again into parts small enough for a human brain to understand, which is called top-down design. Programmers use a structure chart the way an architect uses a blueprint: during design, it's a shared language between the client and the designers, and during building, it's the master plan.
 
-**How it's used:**
-- In structured analysis, structure charts lay out the **high-level design**, or **architecture**, of a computer program.
-- As a design tool, they help the programmer **divide and conquer** a large software problem. That means repeatedly breaking it into parts **small enough for a human brain to understand**.
-- This process is called **top-down design**, or **functional decomposition**.
-- The article's own comparison: programmers use a structure chart the way an **architect uses a blueprint** to build a house.
-- **During design**, the chart is drawn and used as a shared language between the **client** and the various **software designers**.
-- **During building** (implementation), it is constantly referred to as the **master plan**.
+So here's how the two pictures differ. A data-flow diagram shows how data moves between processes, like a map of rivers. A structure chart shows which part of the program is in charge of which, like a family tree.
 
-**🔧 First principles: why "small enough for a human brain"?** People can only hold a few things in mind at once. Any problem bigger than that has to be cut into pieces that each fit in your head. The tree is the record of those cuts.
+**Structured design: building with good modules**
 
-*🍳 Top box: "Restaurant System." Below it: "Ordering," "Kitchen," "Billing." Below "Billing": "Total the bill," "Add tip," "Take payment." Each box can be handed to one programmer, who knows exactly where their piece fits.*
+Structured design is about creating modules, and arranging them into a module hierarchy: a tree where higher modules call on lower ones. To design the best modules, and the best connections between them, called interfaces, two principles matter most.
 
-**Structure chart vs. DFD.** A DFD shows how *data moves* between processes, like a river map. A structure chart shows which *program part is in charge of* which, like a family tree or a company org chart.
+The first principle is cohesion: put the work that belongs together in the same module. A pizza station that holds the dough, the sauce, and the oven has high cohesion. A station that makes pizzas, fixes the printer, and does the payroll has low cohesion, and nobody knows what it's for.
 
-**10. Structured design: building with good modules**
+The second principle is coupling: how much modules have to pass back and forth, and depend on each other. Good design keeps these connections few and simple, which keeps the whole program simpler. The oven cook needs only a ticket: "large, pepperoni, extra crispy." That's low coupling. If the cook had to check the cash drawer, the driver's schedule, and the supplier's invoices before baking, that's high coupling, and a change anywhere would break the kitchen.
 
-**What it is:** **structured design (SD)** is about creating **modules** and putting them together into a "**module hierarchy**", a tree of modules where higher ones call on lower ones.
+Together, strong cohesion and loose coupling mean that each part makes sense on its own, and that changing one part rarely breaks another.
 
-To design the best module structure and **interfaces** (the points where modules connect and pass things to each other), two principles are crucial.
+**Where structured design came from**
 
-**Principle 1: Cohesion**
+Larry Constantine developed structured design in the late 1960s, and refined and published it with others in the 1970s. In 1980, Meilir Page-Jones proposed a version with three main tools. The structure chart shows which modules call which, and in what order. Each module on the chart gets its own module specification, written in pseudo-code or in a program design language, a semi-formal way to describe a program before writing the real code. And a data dictionary works like the one in structured analysis.
 
-Cohesion is "concerned with the grouping of functionally related processes into a particular module."
+Then came the payoff. Once the analysis and design were done, a computer could automatically produce the code that defines each kind of data, and an empty starter template for each module. It's like a pizza shop where, once the menu and recipes are fully written down, a machine prints every station's labeled, empty containers, and the cooks just fill them in.
 
-*Plain version:* put things that do related work **together** in the same module.
+**How it all fits together**
 
-*🍳 The pastry station holds everything for desserts: the oven, the mixer, the sugar. High cohesion. A station that makes desserts, fixes the printer, and does payroll has low cohesion, and nobody knows what it's for.*
+Here are the eight pieces in one place. The context diagram answers: who and what is outside, and what crosses the edge? The data-flow diagram answers: how does information move inside? The mini-spec answers: what exactly does the smallest step do? The data dictionary answers: what exactly is each piece of data? The structure chart answers: how is the program split into modules, and who calls whom? The module specification answers: what does each module do? Cohesion asks: does each module hold only related work? And coupling asks: do the modules depend on each other as little as possible?
 
-**Principle 2: Coupling**
-
-Coupling relates to "the flow of information or parameters passed between modules. Optimal coupling reduces the interfaces of modules and the resulting complexity of the software."
-
-*Plain version:* coupling is how much modules have to pass back and forth and depend on each other. Good design keeps these connections **few and simple**, which keeps the whole program simpler. (*Parameters are the pieces of information handed to a module when you ask it to do something.*)
-
-*🍳 The grill cook needs only a ticket: "burger, medium." That's low coupling. If the grill cook had to check the bar's stock, the cashier's drawer, and the host's seating chart before cooking, that's high coupling. A change anywhere would break the grill.*
-
-**🔧 First principles: why these two together?** Strong cohesion + loose coupling means each part makes sense on its own, and changing one part rarely breaks another. That's the goal of all good design.
-
-**Where it came from, and Page-Jones's version**
-
-- Structured design was developed by **Larry Constantine** in the **late 1960s**, then refined and published with collaborators in the **1970s**.
-- **Page-Jones (1980)** proposed his own approach, made of three main objects:
-  1. **structure charts**
-  2. **module specifications**
-  3. **data dictionary**
-
-How they fit:
-- The **structure chart** shows "the module hierarchy or calling sequence relationship of modules": which modules call (ask for help from) which, and in what order.
-- Every module on the chart gets its own **module specification**, written in **pseudo-code** or a **program design language** (a semi-formal language for describing a program before writing real code).
-- The **data dictionary** is like the one in structured analysis.
-- **The payoff:** at this point in the software development lifecycle, once analysis and design are done, it becomes possible to **automatically generate**:
-  - **data type declarations** (the code that defines what kind of data each item is);
-  - **procedure or subroutine templates** (empty starter shells for each module's code).
-
-*🍳 Once the menu, recipes, and station plan are fully written down, a machine can print every station's labeled, empty prep containers for you. The cooks just fill them in.*
-
-**11. How it all fits together**
-
-Context diagram. What it answers: who and what is outside, and what crosses the edge? Restaurant version: the restaurant as one box, with customers, suppliers, and the bank around it.
-
-Data-flow diagram. What it answers: how does information move inside? Restaurant version: the order travels from waiter to cook to plate to bill.
-
-Process spec, or mini-spec. What it answers: what exactly does the smallest step do? Restaurant version: "After 3 minutes, flip once."
-
-Data dictionary. What it answers: what exactly is each piece of data? Restaurant version: "Order = table + items + time."
-
-Structure chart. What it answers: how is the program split into modules, and who calls whom? Restaurant version: Restaurant System, then Ordering, Kitchen, and Billing.
-
-Module spec. What it answers: what does each module do? Restaurant version: each station's written instructions.
-
-Cohesion. What it answers: does each module hold related work only? Restaurant version: the pastry station does only desserts.
-
-Coupling. What it answers: do modules depend on each other as little as possible? Restaurant version: the grill needs only the ticket.
-
-**The whole story in one line:** start outside (context), follow the data inward (DFDs), break steps down until they're simple (functional primitives and mini-specs), define every piece of data (dictionary), then arrange the program as a tree of tidy, loosely connected modules (structure charts plus cohesion and coupling).
+So the whole story fits in one line. Start outside with the context diagram, follow the data inward with data-flow diagrams, break each step down until it's simple, define every piece of data, and then arrange the program as a tree of tidy, loosely connected modules.

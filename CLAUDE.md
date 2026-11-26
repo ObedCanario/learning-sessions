@@ -12,7 +12,8 @@ Each show is its own Apple Podcasts subscription with its own feed:
 
 - `software-engineering/` = **Software Engineering** (serial; season = topic/series, episode = part):
   https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml
-  S1 = Structured Analysis (4 parts, from the user's plain-English Wikipedia write-up).
+  S1 = Structured Analysis (4 parts). v2 (2026-11-26) was redone with the learning-series procedure: our own plain-English
+  source, diagrams walked through with one pizza-shop example. The user's write-up is kept in `sources/structured-analysis-original.md`.
   S2 = Software Architecture (4 parts). The user gave the raw Wikipedia text, so the plain-English
   source (`sources/software-architecture.md`) was written by us, and the reader text is also FRE 60–70.
   Episodes use hooks and open loops (a cold-open teaser paid off later), and the series stays under an hour.
@@ -39,6 +40,11 @@ Use `styles/rohn-study.md`. Save the source verbatim to `<show>/sources/<name>.m
 - `./pod --show s check <scripts...>` must say INTACT for each script, and host FRE should be in
   the user's target (Aristotle: 60–70).
 - Publish in chapter order so dates and episode numbers line up.
+
+## When the user sends a hard text or URL to learn ("plain English", "first principles", "MrBeast style")
+Follow `procedures/learning-series.md`. It is the user's preferred format (golden sample:
+Software Engineering S2). Plain-English source written by us, FRE 60–70 for both voices, hooks and open loops,
+a challenge each week, a cliffhanger bridge, and the series under the user's time cap.
 
 ## Script syntax
 - blank line = paragraph pause · `# Heading` = spoken + section pause · `---` = section break
