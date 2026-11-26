@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 01:01:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:10:11 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Software Architecture · 3 — Shapes, Styles, and Patterns</title>
+      <description>Monolith versus distributed, four classic styles, the circuit breaker, and a six-step cycle for cutting a system into right-sized parts. A plain-English version of the Wikipedia article, read in full, with commentary.</description>
+      <itunes:summary>Monolith versus distributed, four classic styles, the circuit breaker, and a six-step cycle for cutting a system into right-sized parts. A plain-English version of the Wikipedia article, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/software-architecture-03-shapes-styles-patterns.mp3" length="5991848" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">de62dd2c-0994-4c16-bf98-3c35c07eebf7</guid>
+      <pubDate>Thu, 26 Nov 2026 01:10:11 +0000</pubDate>
+      <itunes:duration>12:29</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>3</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Software Architecture · 2 — The Hidden Forces That Shape a System</title>
       <description>Why qualities, not features, decide a system's shape; how business goals turn into "ilities"; views, conceptual integrity, and Conway's Law. A plain-English version of the Wikipedia article, read in full, with commentary.</description>

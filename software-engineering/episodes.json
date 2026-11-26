@@ -82,5 +82,19 @@
     "version": 1,
     "season": 2,
     "episode": 2
+  },
+  {
+    "slug": "software-architecture-03-shapes-styles-patterns",
+    "title": "Software Architecture · 3 — Shapes, Styles, and Patterns",
+    "description": "Monolith versus distributed, four classic styles, the circuit breaker, and a six-step cycle for cutting a system into right-sized parts. A plain-English version of the Wikipedia article, read in full, with commentary.",
+    "style": "rohn-study",
+    "file": "software-architecture-03-shapes-styles-patterns.mp3",
+    "bytes": 5991848,
+    "duration": "12:29",
+    "guid": "de62dd2c-0994-4c16-bf98-3c35c07eebf7",
+    "published": "2026-11-26T01:10:11+00:00",
+    "version": 1,
+    "season": 2,
+    "episode": 3
   }
 ]
