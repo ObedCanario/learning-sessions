@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 00:52:51 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:01:16 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Software Architecture · 2 — The Hidden Forces That Shape a System</title>
+      <description>Why qualities, not features, decide a system's shape; how business goals turn into "ilities"; views, conceptual integrity, and Conway's Law. A plain-English version of the Wikipedia article, read in full, with commentary.</description>
+      <itunes:summary>Why qualities, not features, decide a system's shape; how business goals turn into "ilities"; views, conceptual integrity, and Conway's Law. A plain-English version of the Wikipedia article, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/software-architecture-02-hidden-forces.mp3" length="6050799" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">237b983f-59df-4206-9608-53e2e0d9c78e</guid>
+      <pubDate>Thu, 26 Nov 2026 01:01:16 +0000</pubDate>
+      <itunes:duration>12:36</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>2</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Software Architecture · 1 — The Decisions You Can't Undo</title>
       <description>What software architecture really is, the one-question test for spotting it, and the two laws every architect lives by. A plain-English version of the Wikipedia article, read in full, with commentary.</description>

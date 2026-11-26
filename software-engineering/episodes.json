@@ -68,5 +68,19 @@
     "version": 1,
     "season": 2,
     "episode": 1
+  },
+  {
+    "slug": "software-architecture-02-hidden-forces",
+    "title": "Software Architecture · 2 — The Hidden Forces That Shape a System",
+    "description": "Why qualities, not features, decide a system's shape; how business goals turn into \"ilities\"; views, conceptual integrity, and Conway's Law. A plain-English version of the Wikipedia article, read in full, with commentary.",
+    "style": "rohn-study",
+    "file": "software-architecture-02-hidden-forces.mp3",
+    "bytes": 6050799,
+    "duration": "12:36",
+    "guid": "237b983f-59df-4206-9608-53e2e0d9c78e",
+    "published": "2026-11-26T01:01:16+00:00",
+    "version": 1,
+    "season": 2,
+    "episode": 2
   }
 ]
