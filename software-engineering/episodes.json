@@ -47,16 +47,17 @@
   {
     "slug": "structured-analysis-04-good-modules",
     "title": "Structured Analysis · 4 — Data Flows, Structure Charts, and Good Modules",
-    "description": "Data-flow diagrams, structure charts, and the two principles that outlasted every method: cohesion and coupling. Plus how all the pieces fit together. Full text read, with commentary.",
+    "description": "Trace an order through a whole business with one finger, the family tree behind every program, and the two words that explain why small changes break faraway things. Plain English, read in full, with commentary.",
     "style": "rohn-study",
-    "file": "structured-analysis-04-good-modules.mp3",
-    "bytes": 8772145,
-    "duration": "18:16",
+    "file": "structured-analysis-04-good-modules-v2.mp3",
+    "bytes": 6876700,
+    "duration": "14:19",
     "guid": "cf633e6d-a409-4373-b862-89fa6e4fdbf4",
     "published": "2026-11-25T23:30:44+00:00",
-    "version": 1,
+    "version": 2,
     "season": 1,
-    "episode": 4
+    "episode": 4,
+    "updated": "2026-11-26T13:33:48+00:00"
   },
   {
     "slug": "software-architecture-01-decisions-you-cant-undo",
