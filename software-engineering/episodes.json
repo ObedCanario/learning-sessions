@@ -96,5 +96,19 @@
     "version": 1,
     "season": 2,
     "episode": 3
+  },
+  {
+    "slug": "software-architecture-04-fighting-decay",
+    "title": "Software Architecture · 4 — Deciding, Remembering, and Fighting Decay",
+    "description": "The four activities architects repeat, two traps that catch almost everyone, decision records, erosion and the two lost years, and fitness functions. A plain-English version of the Wikipedia article, read in full, with commentary.",
+    "style": "rohn-study",
+    "file": "software-architecture-04-fighting-decay.mp3",
+    "bytes": 6786624,
+    "duration": "14:08",
+    "guid": "e8fc45a0-5f92-411b-b648-aafcc3c8dccf",
+    "published": "2026-11-26T01:19:00+00:00",
+    "version": 1,
+    "season": 2,
+    "episode": 4
   }
 ]

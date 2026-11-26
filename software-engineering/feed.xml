@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 01:10:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:19:00 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Software Architecture · 4 — Deciding, Remembering, and Fighting Decay</title>
+      <description>The four activities architects repeat, two traps that catch almost everyone, decision records, erosion and the two lost years, and fitness functions. A plain-English version of the Wikipedia article, read in full, with commentary.</description>
+      <itunes:summary>The four activities architects repeat, two traps that catch almost everyone, decision records, erosion and the two lost years, and fitness functions. A plain-English version of the Wikipedia article, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/software-architecture-04-fighting-decay.mp3" length="6786624" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">e8fc45a0-5f92-411b-b648-aafcc3c8dccf</guid>
+      <pubDate>Thu, 26 Nov 2026 01:19:00 +0000</pubDate>
+      <itunes:duration>14:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Software Architecture · 3 — Shapes, Styles, and Patterns</title>
       <description>Monolith versus distributed, four classic styles, the circuit breaker, and a six-step cycle for cutting a system into right-sized parts. A plain-English version of the Wikipedia article, read in full, with commentary.</description>
