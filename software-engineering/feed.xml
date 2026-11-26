@@ -8,7 +8,7 @@
     <atom:link href="https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Software engineering ideas read in full, with plain-spoken commentary that breaks each one down to first principles.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 23:30:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:52:51 +0000</lastBuildDate>
     <itunes:author>Obed Canario</itunes:author>
     <itunes:owner><itunes:name>Obed Canario</itunes:name></itunes:owner>
     <itunes:image href="https://obedcanario.github.io/learning-sessions/software-engineering/cover.jpg"/>
@@ -16,6 +16,20 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
+    <item>
+      <title>Software Architecture · 1 — The Decisions You Can't Undo</title>
+      <description>What software architecture really is, the one-question test for spotting it, and the two laws every architect lives by. A plain-English version of the Wikipedia article, read in full, with commentary.</description>
+      <itunes:summary>What software architecture really is, the one-question test for spotting it, and the two laws every architect lives by. A plain-English version of the Wikipedia article, read in full, with commentary.</itunes:summary>
+      <enclosure url="https://obedcanario.github.io/learning-sessions/software-engineering/episodes/software-architecture-01-decisions-you-cant-undo.mp3" length="6474173" type="audio/mpeg"/>
+      <link>https://obedcanario.github.io/learning-sessions/software-engineering/</link>
+      <guid isPermaLink="false">4aa17871-b15c-4169-9e58-7f40aadb0b9a</guid>
+      <pubDate>Thu, 26 Nov 2026 00:52:51 +0000</pubDate>
+      <itunes:duration>13:29</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:episode>1</itunes:episode>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Structured Analysis · 4 — Data Flows, Structure Charts, and Good Modules</title>
       <description>Data-flow diagrams, structure charts, and the two principles that outlasted every method: cohesion and coupling. Plus how all the pieces fit together. Full text read, with commentary.</description>

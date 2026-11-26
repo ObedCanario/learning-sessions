@@ -13,6 +13,10 @@ Each show is its own Apple Podcasts subscription with its own feed:
 - `software-engineering/` = **Software Engineering** (serial; season = topic/series, episode = part):
   https://obedcanario.github.io/learning-sessions/software-engineering/feed.xml
   S1 = Structured Analysis (4 parts, from the user's plain-English Wikipedia write-up).
+  S2 = Software Architecture (4 parts). The user gave the raw Wikipedia text, so the plain-English
+  source (`sources/software-architecture.md`) was written by us, and the reader text is also FRE 60–70.
+  Episodes use hooks and open loops (a cold-open teaser paid off later), and the series stays under an hour.
+  The commentary uses this podcast tool as a running "lab" example; keep its facts true to the code.
 
 Use `./pod --show <folder> ...` for any show other than the root one.
 New show: `./pod new-show <folder> --title "Title" [--serial]`, then
